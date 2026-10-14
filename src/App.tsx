@@ -35,7 +35,8 @@ function App() {
   return (
     <NavigationProvider activeSection={activeSection}>
       <AnimatePresence>{isPrealoder && <Preloader key="preloader" />}</AnimatePresence>
-      <Navbar />
+      {!isPrealoder && <Navbar />}
+
       <main>
         <Hero />
         <About />

@@ -73,7 +73,7 @@
   --foreground: oklch(18.569% 0.04805 268.686);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
+  --popover: oklch(97.67% 0.00275 285.75);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(50.669% 0.27678 263.688);
   --primary-foreground: oklch(97.67% 0.00275 285.75);
@@ -98,9 +98,15 @@
   }
   body {
     @apply bg-background text-foreground;
+    -ms-overflow-style: none;
   }
   html {
     @apply font-sans;
     scroll-behavior: smooth;
+    scroll-width: none;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
   }
 }
