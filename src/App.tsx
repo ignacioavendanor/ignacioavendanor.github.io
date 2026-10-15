@@ -14,13 +14,15 @@ import { Navbar } from './components/layouts/navigation/Navbar'
 import { About } from './features/about'
 import { Experience } from './features/experience'
 import { Projects } from './features/projects'
+import { Footer } from './components/layouts/footer/Footer'
 import { Contact } from './features/contact'
+
+const sectionIds = navigationItems.map((item) => item.id)
 
 function App() {
   const { isPrealoder, seenPreloader } = usePreloader()
 
-  const sectionId = navigationItems.map((item) => item.id)
-  const activeSection = useScrollSpy(sectionId)
+  const activeSection = useScrollSpy(sectionIds)
 
   useEffect(() => {
     if (!isPrealoder) return
@@ -44,6 +46,7 @@ function App() {
         <Projects />
         <Contact />
       </main>
+      <Footer />
     </NavigationProvider>
   )
 }
