@@ -2,14 +2,14 @@ import { createContext, useState, type ReactNode } from 'react'
 
 interface NavigationContextType {
   isOpen: boolean
-  toggleMenu: () => void
+  setMenuOpen: (open: boolean) => void
   closeMenu: () => void
   activeSection: string
 }
 
 export const NavigationContext = createContext<NavigationContextType>({
   isOpen: false,
-  toggleMenu: () => {},
+  setMenuOpen: () => {},
   closeMenu: () => {},
   activeSection: '',
 })
@@ -22,11 +22,13 @@ interface NavigationProviderProps {
 export function NavigationProvider({ children, activeSection }: NavigationProviderProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
-  const toggleMenu = () => setIsOpen((prev) => !prev)
+  const setMenuOpen = (open: boolean) => setIsOpen(open)
   const closeMenu = () => setIsOpen(false)
 
   return (
-    <NavigationContext.Provider value={{ isOpen, toggleMenu, closeMenu, activeSection }}>
+    <NavigationContext.Provider
+      value={{ isOpen, setMenuOpen, closeMenu, activeSection }}
+    >
       {children}
     </NavigationContext.Provider>
   )

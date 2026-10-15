@@ -6,22 +6,22 @@ export interface NavigationItem {
 export const navigationItems: NavigationItem[] = [
   {
     id: 'home',
-    label: 'menu.home',
+    label: 'hero.title',
   },
   {
     id: 'about',
-    label: 'menu.about',
-  },
-  {
-    id: 'projects',
-    label: 'menu.projects',
+    label: 'about.title',
   },
   {
     id: 'experience',
-    label: 'menu.experience',
+    label: 'experience.title',
+  },
+  {
+    id: 'projects',
+    label: 'projects.title',
   },
   {
     id: 'contact',
-    label: 'menu.contact',
+    label: 'contact.title',
   },
 ]

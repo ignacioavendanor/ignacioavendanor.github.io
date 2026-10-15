@@ -12,7 +12,7 @@ export function useScrollSpy(sectionIds: string[]) {
           }
         })
       },
-      { rootMargin: '-40% 0px -40% 0px' },
+      { rootMargin: '-20% 0px -20% 0px' },
     )
 
     sectionIds.forEach((id) => {

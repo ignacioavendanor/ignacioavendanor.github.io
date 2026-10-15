@@ -23,7 +23,7 @@ export function NavigationMenu() {
                 onClick={closeMenu}
                 whileHover={{ x: 12 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                className={`text-3xl sm:text-5xl font-black uppercase transition-colors w-fit block ${
+                className={`text-3xl sm:text-5xl font-black uppercase transition-colors w-fit block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-md ${
                   activeSection === item.id ? 'text-primary' : 'text-foreground hover:text-primary'
                 }`}
               >
