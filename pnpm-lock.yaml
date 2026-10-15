@@ -29,9 +29,6 @@ importers:
       cn:
         specifier: ^0.4.0
         version: 0.4.0
-      i18next:
-        specifier: ^26.4.2
-        version: 26.4.2(typescript@6.0.3)
       lucide-react:
         specifier: ^1.49.0
         version: 1.49.0(@types/react@19.3.0)(react@19.3.0)
@@ -47,6 +44,9 @@ importers:
       react-i18next:
         specifier: ^17.0.15
         version: 17.0.15(i18next@26.4.2(typescript@6.0.3))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
+      react-icons:
+        specifier: ^5.7.0
+        version: 5.7.0(react@19.3.0)
       shadcn:
         specifier: ^4.21.1
         version: 4.21.1(typescript@6.0.3)
@@ -75,6 +75,9 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
+      i18next:
+        specifier: ^26.4.2
+        version: 26.4.2(typescript@6.0.3)
       lint-staged:
         specifier: ^17.6.0
         version: 17.6.0
@@ -1771,6 +1774,11 @@ packages:
         optional: true
       typescript:
         optional: true
+
+  react-icons@5.7.0:
+    resolution: {integrity: sha512-LBLy340Rzqy6+/yVhZKT3B/QpP1BZaesGqasf09HPOBzRarcDIFH0WwXlXQfE7q7ipxK4MSiC5DIBWURCny6fw==}
+    peerDependencies:
+      react: '*'
 
   react@19.3.0:
     resolution: {integrity: sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==}
@@ -3596,6 +3604,10 @@ snapshots:
     optionalDependencies:
       react-dom: 19.3.0(react@19.3.0)
       typescript: 6.0.3
+
+  react-icons@5.7.0(react@19.3.0):
+    dependencies:
+      react: 19.3.0
 
   react@19.3.0: {}
 
