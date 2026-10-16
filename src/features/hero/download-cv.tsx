@@ -19,7 +19,7 @@ export function DownloadCvButton() {
 
             const blob = await downloadCv()
 
-            downloadBlob(blob, 'CV-Ignacio-Avendano.pdf')
+            downloadBlob(blob, 'CV_Ignacio_Avendano.pdf')
           } finally {
             setIsDownloading(false)
           }
