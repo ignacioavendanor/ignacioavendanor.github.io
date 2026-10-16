@@ -1,7 +1,12 @@
 import type { Language } from '@/i18n/i18n'
 import { useTranslation } from 'react-i18next'
+import { Button } from '../ui/button'
 
-export function LanguageToggle() {
+interface LanguageToggleProps {
+  isScrolled?: boolean
+}
+
+export function LanguageToggle({ isScrolled }: LanguageToggleProps) {
   const { i18n } = useTranslation()
   const currentLanguage = i18n.language as Language
 
@@ -11,12 +16,15 @@ export function LanguageToggle() {
   }
 
   return (
-    <button
+    <Button
       onClick={toggleLanguage}
-      className="text-sm uppercase text-background hover:text-primary transition-colors cursor-pointer"
+      variant="ghost"
+      className={`text-sm font-bold uppercase cursor-pointer transition-colors ${
+        isScrolled ? 'text-primary' : 'text-background'
+      }`}
     >
-      {currentLanguage === 'es' ? 'EN' : 'ES'}
-    </button>
+      {currentLanguage === 'es' ? 'ES' : 'EN'}
+    </Button>
   )
 }
 
