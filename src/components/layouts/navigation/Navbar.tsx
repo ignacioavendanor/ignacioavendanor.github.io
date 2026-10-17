@@ -29,16 +29,13 @@ export function Navbar() {
         </a>
 
         <div className="flex items-center gap-3 sm:gap-6">
-          <LanguageToggle isScrolled={isScrolled} />
+          <LanguageToggle />
 
           <Sheet open={isOpen} onOpenChange={setMenuOpen}>
             <Button
               variant="ghost"
               onClick={() => setMenuOpen(true)}
-              className={cn(
-                'font-bold tracking-wider',
-                isScrolled && 'text-primary hover:text-foreground',
-              )}
+              className="font-bold tracking-wider"
               aria-label={t('menu.title')}
             >
               <span className="hidden md:inline-block text-sm md:text-base mr-2">
