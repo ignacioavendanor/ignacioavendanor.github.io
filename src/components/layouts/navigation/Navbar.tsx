@@ -28,7 +28,7 @@ export function Navbar() {
           <img src="/icons/logo-dark.svg" alt="IA Logo" className="h-8 w-auto" />
         </a>
 
-        <div className="flex items-center gap-4 sm:gap-6">
+        <div className="flex items-center gap-3 sm:gap-6">
           <LanguageToggle isScrolled={isScrolled} />
 
           <Sheet open={isOpen} onOpenChange={setMenuOpen}>
@@ -36,14 +36,14 @@ export function Navbar() {
               variant="ghost"
               onClick={() => setMenuOpen(true)}
               className={cn(
-                'font-bold uppercase tracking-wider',
-                isScrolled
-                  ? 'text-primary'
-                  : 'text-primary lg:text-background lg:hover:text-muted-accent lg:hover:bg-transparent',
+                'font-bold tracking-wider',
+                isScrolled && 'text-primary hover:text-foreground',
               )}
               aria-label={t('menu.title')}
             >
-              <span className="text-sm md:text-base">{t('menu.title')}</span>
+              <span className="hidden md:inline-block text-sm md:text-base mr-2">
+                {t('menu.title')}
+              </span>
               <Menu className="size-6 sm:size-7 shrink-0" strokeWidth={2} />
             </Button>
 

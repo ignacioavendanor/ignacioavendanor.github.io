@@ -7,6 +7,7 @@ import { useNavigation } from '@/hooks/useNavigation'
 import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { DownloadCvButton } from '@/features/hero/download-cv'
 
 export function Sidebar() {
   const { t } = useTranslation()
@@ -14,7 +15,7 @@ export function Sidebar() {
 
   return (
     <div className="flex h-full flex-col bg-foreground text-background overflow-y-auto selection:bg-primary selection:text-background">
-      <div className="flex items-center justify-center px-6 sm:px-10 py-6 shrink-0">
+      <div className="flex items-center justify-center px-6 sm:px-10 py-4 sm:py-5 shrink-0">
         <Button
           variant="ghost"
           onClick={closeMenu}
@@ -31,10 +32,10 @@ export function Sidebar() {
       <Separator />
 
       <nav
-        className="flex grow flex-col justify-center px-6 sm:px-10 lg:px-14 py-4"
         aria-label="Menú principal"
+        className="flex grow flex-col justify-center gap-6 px-6 sm:px-10 lg:px-14 py-4 min-h-0"
       >
-        <ul className="flex flex-col gap-6 sm:gap-7 m-0 p-0 list-none">
+        <ul className="flex flex-col gap-4 sm:gap-6 m-0 p-0 list-none">
           {navigationItems.map((item) => {
             const isActive = activeSection === item.id
 
@@ -53,7 +54,7 @@ export function Sidebar() {
                   whileHover={{ x: 12 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   className={cn(
-                    'text-3xl sm:text-5xl font-black uppercase tracking-tight transition-colors w-fit block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                    'text-3xl sm:text-5xl font-black uppercase tracking-tight transition-colors w-fit block',
                     isActive ? 'text-primary' : 'text-background hover:text-primary',
                   )}
                 >
@@ -63,25 +64,29 @@ export function Sidebar() {
             )
           })}
         </ul>
+
+        <div className="pt-2 *:w-full">
+          <DownloadCvButton />
+        </div>
       </nav>
 
       <Separator />
 
-      <footer className="flex shrink-0 flex-col gap-5 px-6 sm:px-10 lg:px-14 py-6 pb-10 sm:pb-8">
+      <footer className="flex shrink-0 flex-col gap-4 px-6 sm:px-10 lg:px-14 py-4 sm:py-5">
         <div className="flex flex-col gap-1">
-          <span className="text-xs font-bold uppercase tracking-widest text-muted-dark">
+          <span className="text-sm font-bold tracking-widest text-muted-dark">
             {t('contact.email')}
           </span>
           <a
             href="mailto:ignacioavendanoramirez@gmail.com"
-            className="text-base sm:text-lg font-extrabold text-background hover:text-primary transition-colors underline decoration-2 underline-offset-4 w-fit break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="text-base sm:text-lg font-bold text-background hover:text-primary transition-colors underline decoration-2 underline-offset-4 w-fit break-all"
           >
             ignacioavendanoramirez@gmail.com
           </a>
         </div>
 
         <div className="flex flex-col">
-          <span className="text-xs font-bold uppercase tracking-widest text-muted-dark">
+          <span className="text-sm font-bold tracking-widest text-muted-dark">
             {t('contact.socials')}
           </span>
           <div className="flex items-center gap-2 pt-1">
@@ -89,7 +94,8 @@ export function Sidebar() {
               href="https://github.com/funktasthic"
               target="_blank"
               rel="noreferrer"
-              className="p-1 -ml-1 text-background hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              aria-label="GitHub"
+              className="p-1 -ml-1 text-background hover:text-primary transition-colors"
             >
               <FaGithub className="size-6 sm:size-7" />
             </a>
@@ -97,7 +103,8 @@ export function Sidebar() {
               href="https://linkedin.com/in/ignacioavr"
               target="_blank"
               rel="noreferrer"
-              className="p-1 text-background hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              aria-label="LinkedIn"
+              className="p-1 text-background hover:text-primary transition-colors"
             >
               <FaLinkedin className="size-6 sm:size-7" />
             </a>

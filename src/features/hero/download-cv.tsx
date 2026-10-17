@@ -37,7 +37,7 @@ export function DownloadCvButton() {
     <Button
       type="button"
       size={'xl'}
-      variant={'outline'}
+      variant={'secondary'}
       onClick={handleDownload}
       disabled={isDownloading}
     >
