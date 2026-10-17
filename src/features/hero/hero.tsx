@@ -3,8 +3,7 @@ import { Container } from '@/components/layouts/Container'
 import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import profilePic from '@/assets/images/profile-picture.webp'
-import { useTranslation } from 'react-i18next'
-import { DownloadCvButton } from './download-cv'
+import { Trans, useTranslation } from 'react-i18next'
 
 export function Hero() {
   const { t } = useTranslation()
@@ -25,7 +24,7 @@ export function Hero() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="text-2xl font-black uppercase leading-none xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
+            className="text-2xl tracking-tighter font-black uppercase leading-none xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
           >
             <span className="mb-1 block text-xs font-extrabold uppercase tracking-tight text-primary xs:mb-2 sm:text-sm lg:text-xl xl:text-2xl">
               {t('hero.role')}
@@ -41,8 +40,12 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
             className="mt-2 max-w-xs text-xs leading-relaxed text-muted-foreground xs:mt-3 sm:mt-5 sm:max-w-md md:mt-6 md:max-w-lg md:text-lg"
           >
-            Lorem ipsum <span className="font-semibold italic text-primary">dolor sit amet</span>,
-            consectetur adipiscing elit. Sed do eiusmo.
+            <Trans
+              i18nKey="hero.description"
+              components={{
+                highlight: <span className="font-semibold text-primary" />,
+              }}
+            />
           </motion.p>
 
           <motion.div
@@ -53,19 +56,23 @@ export function Hero() {
           >
             <Button size="xl">
               <a href="#projects" className="flex items-center">
-                Ver Proyectos
+                {t('hero.cta')}
                 <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 stroke-2 sm:ml-2 sm:h-4 sm:w-4" />
               </a>
             </Button>
 
-            <DownloadCvButton />
+            <Button size="xl" variant={'outline'}>
+              <a href="#contact" className="flex items-center">
+                {t('hero.secondarycta')}
+              </a>
+            </Button>
           </motion.div>
         </div>
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
-          className="relative flex w-full justify-center lg:absolute lg:bottom-0 lg:right-14 lg:w-auto xl:right-32 2xl:right-10"
+          className="relative flex w-full justify-center lg:absolute lg:bottom-0 lg:right-20 lg:w-auto xl:right-36 2xl:right-16"
         >
           <img
             src={profilePic}

@@ -9,9 +9,11 @@ const es = {
       title: 'Inicio',
       role: 'Ingeniero de Software',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
+        'Transformo <highlight>ideas en productos digitales</highlight> para conectar tecnología, operación y negocio, convirtiendo procesos complejos en <highlight>soluciones prácticas y sostenibles</highlight>.',
+      cta: 'Ver proyectos',
+      secondarycta: 'Conversemos',
       cv: 'Descargar CV',
-      download: 'Descargando',
+      download: 'Descargando...',
     },
     about: { title: 'Sobre mí' },
     projects: { title: 'Proyectos' },

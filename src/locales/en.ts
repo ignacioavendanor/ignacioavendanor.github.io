@@ -9,7 +9,9 @@ const en = {
       title: 'Home',
       role: 'Software Engineer',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
+        'I transform <highlight>ideas into digital products</highlight> to bridge technology, operations, and business, translating complex processes into <highlight>practical, sustainable solutions</highlight>.',
+      cta: 'View projects',
+      secondarycta: 'Get in touch',
       cv: 'Download CV',
       download: 'Downloading...',
     },

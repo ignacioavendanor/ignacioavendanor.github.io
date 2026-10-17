@@ -2,31 +2,13 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('./assets/fonts/Roboto-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-}
+@import '@fontsource-variable/epilogue';
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('./assets/fonts/Roboto-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('./assets/fonts/Roboto-ExtraBold.woff2') format('woff2');
-  font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('./assets/fonts/Roboto-Black.woff2') format('woff2');
-  font-weight: 900;
+  font-family: 'Epilogue';
+  src: url('./assets/fonts/Epilogue-VariableFont.woff2') format('woff2-variations');
+  font-weight: 400 900;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -37,8 +19,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Roboto', sans-serif;
-  --font-heading: 'Roboto', sans-serif;
+  --font-sans: 'Epilogue', sans-serif;
+  --font-heading: 'Epilogue', sans-serif;
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
