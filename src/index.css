@@ -4,14 +4,6 @@
 
 @import '@fontsource-variable/epilogue';
 
-@font-face {
-  font-family: 'Epilogue';
-  src: url('./assets/fonts/Epilogue-VariableFont.woff2') format('woff2-variations');
-  font-weight: 400 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -19,8 +11,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Epilogue', sans-serif;
-  --font-heading: 'Epilogue', sans-serif;
+  --font-sans: 'Epilogue Variable', sans-serif;
+  --font-heading: 'Epilogue Variable', sans-serif;
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -84,7 +76,6 @@
     -ms-overflow-style: none;
   }
   html {
-    @apply font-sans;
     scroll-behavior: smooth;
   }
   html::-webkit-scrollbar,
