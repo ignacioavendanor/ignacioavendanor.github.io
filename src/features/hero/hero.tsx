@@ -79,7 +79,7 @@ export function Hero() {
             <img
               src={profilePic}
               alt="Ignacio Avendaño"
-              className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 lg:w-96 xl:w-104"
+              className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 lg:w-96 xl:w-104 grayscale hover:grayscale-0 transition duration-300 ease-in-out"
               loading="eager"
               decoding="async"
             />
