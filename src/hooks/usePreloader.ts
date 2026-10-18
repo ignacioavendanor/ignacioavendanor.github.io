@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const PRELOADER_STORAGE_KEY = 'preloader-seen'
 
 export function usePreloader() {
-  const [isPrealoder, setPreloader] = useState(() => {
+  const [isPreloader, setPreloader] = useState(() => {
     return sessionStorage.getItem(PRELOADER_STORAGE_KEY) !== 'true'
   })
 
@@ -12,8 +12,18 @@ export function usePreloader() {
     setPreloader(false)
   }
 
+  useEffect(() => {
+    if (!isPreloader) return
+
+    const timeout = setTimeout(() => {
+      seenPreloader()
+    }, 2000)
+
+    return () => clearTimeout(timeout)
+  }, [isPreloader])
+
   return {
-    isPrealoder,
+    isPreloader,
     seenPreloader,
   }
 }

@@ -73,10 +73,13 @@
   }
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    min-height: 100svh;
     -ms-overflow-style: none;
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
   }
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
