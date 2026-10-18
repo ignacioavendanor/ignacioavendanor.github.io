@@ -1,5 +1,5 @@
-import { env } from '../env'
-import { api } from './axios'
+import { api } from '@/lib/api/axios'
+import { env } from '@/lib/env'
 
 export async function downloadCv(): Promise<Blob> {
   try {
@@ -15,6 +15,7 @@ export async function downloadCv(): Promise<Blob> {
     )
     return data
   } catch (error) {
-    throw new Error(error instanceof Error ? error.message : 'Error fetching CV.')
+    console.error('Error downloading CV:', error)
+    throw error
   }
 }

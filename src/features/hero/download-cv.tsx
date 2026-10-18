@@ -3,6 +3,8 @@ import { Download, Loader2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import { motion } from 'motion/react'
+import { downloadCv } from '@/lib/api/cv'
+import { downloadBlob } from '@/lib/download'
 
 const MotionButton = motion.create(Button)
 
@@ -13,7 +15,10 @@ export function DownloadCVButton() {
   const handleDownload = async () => {
     setIsDownloading(true)
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      const blob = await downloadCv()
+      downloadBlob(blob, 'CV_Ignacio_Avendaño.pdf')
+    } catch (error) {
+      console.error('Error al descargar el CV:', error)
     } finally {
       setIsDownloading(false)
     }
