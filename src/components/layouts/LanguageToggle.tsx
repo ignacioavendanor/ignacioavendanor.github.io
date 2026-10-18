@@ -1,5 +1,6 @@
 import type { Language } from '@/i18n/i18n'
 import { useTranslation } from 'react-i18next'
+import { Button } from '../ui/button'
 
 export function LanguageToggle() {
   const { i18n } = useTranslation()
@@ -11,12 +12,14 @@ export function LanguageToggle() {
   }
 
   return (
-    <button
+    <Button
       onClick={toggleLanguage}
-      className="text-sm uppercase text-background hover:text-primary transition-colors cursor-pointer"
+      variant="ghost"
+      size={'lg'}
+      className="uppercase cursor-pointer transition-colors"
     >
-      {currentLanguage === 'es' ? 'EN' : 'ES'}
-    </button>
+      {currentLanguage === 'es' ? 'ES' : 'EN'}
+    </Button>
   )
 }
 
