@@ -20,7 +20,6 @@ export function Hero() {
 
       <Container>
         <div className="relative z-20 flex flex-col-reverse items-center justify-center gap-2 xs:gap-2.5 sm:gap-4 lg:min-h-svh lg:flex-row lg:items-end lg:justify-start lg:gap-8 xl:gap-12">
-          {/* En mobile la caja de texto mide solo lo que ocupan sus textos (sin flex-1); en desktop recupera lg:flex-1 */}
           <div className="flex w-full min-w-0 flex-initial flex-col items-center justify-center text-center sm:max-w-xl md:max-w-2xl lg:max-w-xl lg:flex-1 lg:items-start lg:self-center lg:text-left xl:max-w-2xl">
             <motion.h1
               initial={{ opacity: 0 }}
@@ -40,7 +39,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-              className="mt-1 max-w-xs text-xs leading-relaxed text-muted-foreground xs:mt-1.5 sm:max-w-md sm:text-sm md:mt-2 md:max-w-lg md:text-base lg:mt-4 lg:text-lg"
+              className="max-w-xs text-xs leading-relaxed text-muted-foreground sm:max-w-md sm:text-sm md:max-w-lg lg:text-lg"
             >
               <Trans
                 i18nKey="hero.description"
@@ -54,7 +53,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
-              className="mt-2.5 flex flex-wrap items-center justify-center gap-2 xs:mt-3 xs:gap-2.5 sm:mt-3.5 sm:gap-3 lg:mt-5 lg:justify-start lg:gap-4"
+              className="mt-2 flex flex-wrap items-center justify-center gap-2 xs:mt-3 xs:gap-2.5 sm:mt-3.5 sm:gap-3 lg:mt-5 lg:justify-start lg:gap-4"
             >
               <Button size="xl">
                 <a href="#projects" className="flex items-center">
@@ -75,13 +74,14 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
-            className="flex shrink min-w-0 items-center justify-center self-center lg:items-end lg:self-end"
+            className="flex min-w-0 shrink-0 items-center justify-center self-center lg:self-end lg:justify-end"
           >
             <img
               src={profilePic}
               alt="Ignacio Avendaño"
-              className="h-auto w-40 max-w-full object-cover xs:w-48 sm:w-60 md:w-80 lg:w-98 xl:w-105"
+              className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 lg:w-96 xl:w-104"
               loading="eager"
+              decoding="async"
             />
           </motion.div>
         </div>

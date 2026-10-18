@@ -1,6 +1,7 @@
 import { Menu } from 'lucide-react'
 import { Sheet, SheetContent } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
 import { Sidebar } from './Sidebar'
 import LanguageToggle from '../LanguageToggle'
 import { useNavigation } from '@/hooks/useNavigation'
@@ -20,34 +21,34 @@ export function Navbar() {
         isScrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent',
       )}
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-5">
-        <a
-          href="#"
-          className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-        >
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-4">
+        <a href="#" className="flex items-center">
           <img src="/icons/logo-dark.svg" alt="IA Logo" className="h-8 w-auto" />
         </a>
 
-        <div className="flex items-center gap-3 sm:gap-6">
+        <div className="flex items-center gap-2 sm:gap-3">
           <LanguageToggle />
+
+          <div className="flex items-center self-stretch py-2">
+            <Separator orientation="vertical" className="bg-foreground" />
+          </div>
 
           <Sheet open={isOpen} onOpenChange={setMenuOpen}>
             <Button
               variant="ghost"
+              size="sm"
               onClick={() => setMenuOpen(true)}
-              className="font-bold tracking-wider"
+              className="text-sm"
               aria-label={t('menu.title')}
             >
-              <span className="hidden md:inline-block text-sm md:text-base mr-2">
-                {t('menu.title')}
-              </span>
-              <Menu className="size-6 sm:size-7 shrink-0" strokeWidth={2} />
+              <span className="hidden md:inline-block mr-2">{t('menu.title')}</span>
+              <Menu className="size-5 shrink-0" strokeWidth={2} />
             </Button>
 
             <SheetContent
               side="right"
               showCloseButton={false}
-              className="w-full sm:max-w-md bg-foreground border-l border-muted-dark/20 p-0 shadow-2xl focus:outline-none"
+              className="border-l border-border/10"
             >
               <Sidebar />
             </SheetContent>
