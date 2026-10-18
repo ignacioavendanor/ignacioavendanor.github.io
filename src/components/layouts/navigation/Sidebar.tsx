@@ -21,7 +21,7 @@ export function Sidebar() {
           onClick={closeMenu}
           className="group gap-2 px-3 py-2 text-background hover:text-muted-accent"
         >
-          <span className="text-sm font-bold uppercase tracking-wider">{t('menu.close')}</span>
+          <span className="text-sm tracking-wider">{t('menu.close')}</span>
           <X
             className="size-6 transition-transform duration-200 group-hover:rotate-90"
             strokeWidth={2}
@@ -33,7 +33,7 @@ export function Sidebar() {
 
       <nav
         aria-label={t('menu.title')}
-        className="flex grow flex-col justify-center gap-6 px-6 sm:px-10 lg:px-14 py-4 min-h-0"
+        className="flex grow flex-col justify-center px-6 sm:px-10 lg:px-14 py-4 min-h-0"
       >
         <ul className="flex flex-col gap-4 sm:gap-6 m-0 p-0 list-none">
           {navigationItems.map((item) => {
@@ -41,12 +41,7 @@ export function Sidebar() {
 
             return (
               <li key={item.id} className="flex items-center gap-4">
-                {isActive && (
-                  <span
-                    aria-hidden="true"
-                    className="size-3.5 bg-primary shrink-0 shadow-[2px_2px_0px_#000]"
-                  />
-                )}
+                {isActive && <span aria-hidden="true" className="size-3.5 bg-primary shrink-0" />}
 
                 <motion.a
                   href={`#${item.id}`}
@@ -54,7 +49,7 @@ export function Sidebar() {
                   whileHover={{ x: 12 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   className={cn(
-                    'text-3xl sm:text-5xl font-black uppercase tracking-tight transition-colors w-fit block',
+                    'text-3xl sm:text-4xl font-black uppercase tracking-tight transition-colors w-fit block',
                     isActive ? 'text-primary' : 'text-background hover:text-primary',
                   )}
                 >
@@ -65,7 +60,7 @@ export function Sidebar() {
           })}
         </ul>
 
-        <div className="pt-2 *:w-full">
+        <div className="pt-4 *:w-full">
           <DownloadCVButton />
         </div>
       </nav>
