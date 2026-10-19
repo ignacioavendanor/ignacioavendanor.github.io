@@ -18,7 +18,7 @@ export function Navbar() {
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent',
+        isScrolled ? 'backdrop-blur-md shadow-sm' : 'bg-transparent',
       )}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-4">

@@ -1,52 +1,44 @@
-import { useEffect } from 'react'
 import { AnimatePresence } from 'motion/react'
 
 import { Preloader } from './components/layouts/preloader/Preloader'
-import { usePreloader } from './hooks/usePreloader'
-import { useScrollSpy } from './hooks/useScrollSpy'
+import { Navbar } from './components/layouts/navigation/Navbar'
+import { Footer } from './components/layouts/footer/Footer'
 
 import { navigationItems } from './config/navigation'
 import { NavigationProvider } from './context/NavigationContext'
+import { usePreloader } from './hooks/usePreloader'
+import { useScrollSpy } from './hooks/useScrollSpy'
 
 // Features
 import { Hero } from './features/hero'
-import { Navbar } from './components/layouts/navigation/Navbar'
 import { About } from './features/about'
 import { Experience } from './features/experience'
 import { Projects } from './features/projects'
-import { Footer } from './components/layouts/footer/Footer'
 import { Contact } from './features/contact'
 
 const sectionIds = navigationItems.map((item) => item.id)
 
 function App() {
-  const { isPrealoder, seenPreloader } = usePreloader()
-
+  const { isPreloader } = usePreloader()
   const activeSection = useScrollSpy(sectionIds)
-
-  useEffect(() => {
-    if (!isPrealoder) return
-
-    const timeout = setTimeout(() => {
-      seenPreloader()
-    }, 2000)
-
-    return () => clearTimeout(timeout)
-  }, [isPrealoder, seenPreloader])
 
   return (
     <NavigationProvider activeSection={activeSection}>
-      <AnimatePresence>{isPrealoder && <Preloader key="preloader" />}</AnimatePresence>
-      {!isPrealoder && <Navbar />}
+      <AnimatePresence>{isPreloader && <Preloader key="preloader" />}</AnimatePresence>
 
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
+      <div className="flex min-h-svh flex-col">
+        <Navbar />
+
+        <main className="flex-1">
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+
+        <Footer />
+      </div>
     </NavigationProvider>
   )
 }

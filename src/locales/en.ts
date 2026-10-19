@@ -3,19 +3,40 @@ const en = {
     menu: {
       title: 'Menu',
       close: 'Close',
-      home: 'Home',
+      copyright: 'Developed by Ignacio Avendaño',
     },
     hero: {
       title: 'Home',
       role: 'Software Engineer',
       description:
-        'I transform <highlight>ideas into digital products</highlight> to bridge technology, operations, and business, translating complex processes into <highlight>practical, sustainable solutions</highlight>.',
+        'I bridge <highlight>technology, processes, and business</highlight> with tailored solutions, turning complex operational bottlenecks into <highlight>practical, high-impact outcomes</highlight>.',
       cta: 'View projects',
       secondarycta: 'Get in touch',
       cv: 'Download CV',
       download: 'Downloading...',
     },
-    about: { title: 'About me' },
+    about: {
+      title: 'About Me',
+      description:
+        'Software Engineer focused on <highlight>platform architecture and systems integration</highlight>. Through software design and development, I deliver technical solutions and orchestrate <highlight>infrastructure</highlight> to ensure <highlight>operational continuity</highlight> and business scalability.',
+      technologies: 'Stack',
+      education: {
+        title: 'Education',
+        degree: 'B.S. in Computer Science & Informatics Engineering',
+        institution: 'Universidad Católica del Norte',
+      },
+      languages: {
+        title: 'Languages',
+        native: {
+          name: 'Spanish',
+          level: 'Native',
+        },
+        secondary: {
+          name: 'English',
+          level: 'Intermediate (B1 Cambridge)',
+        },
+      },
+    },
     projects: { title: 'Projects' },
     experience: { title: 'Experience' },
     contact: {
