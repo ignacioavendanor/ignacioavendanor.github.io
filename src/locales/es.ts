@@ -3,19 +3,39 @@ const es = {
     menu: {
       title: 'Menú',
       close: 'Cerrar',
-      copyright: 'Todos los derechos reservados',
     },
     hero: {
       title: 'Inicio',
       role: 'Ingeniero de Software',
       description:
-        'Transformo <highlight>ideas en productos digitales</highlight> para conectar tecnología, operación y negocio, convirtiendo procesos complejos en <highlight>soluciones prácticas y sostenibles</highlight>.',
+        'Conecto <highlight>tecnología, procesos y negocio</highlight> mediante soluciones a medida, transformando problemas operativos complejos en <highlight>resultados prácticos y de alto impacto</highlight>.',
       cta: 'Ver proyectos',
       secondarycta: 'Conversemos',
       cv: 'Descargar CV',
       download: 'Descargando...',
     },
-    about: { title: 'Sobre mí' },
+    about: {
+      title: 'Acerca de mí',
+      description:
+        'Ingeniero de Software enfocado en <highlight>arquitectura e integración de plataformas</highlight>. A través del diseño y el desarrollo de software, implemento soluciones tecnológicas y orquesto <highlight>infraestructura</highlight> para asegurar la escalabilidad y <highlight>continuidad operacional.</highlight>',
+      technologies: 'Tecnologías',
+      education: {
+        title: 'Educación',
+        degree: 'Ingeniero Civil en Computación e Informática',
+        institution: 'Universidad Católica del Norte',
+      },
+      languages: {
+        title: 'Idiomas',
+        native: {
+          name: 'Español',
+          level: 'Nativo',
+        },
+        secondary: {
+          name: 'Inglés',
+          level: 'Intermedio (B1 Cambridge)',
+        },
+      },
+    },
     projects: { title: 'Proyectos' },
     experience: { title: 'Experiencia' },
     contact: {
