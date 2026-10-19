@@ -11,23 +11,24 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-svh items-center justify-center overflow-x-clip bg-background py-6 xs:py-8 sm:py-10 lg:py-0"
+      className="relative flex min-h-svh lg:h-svh items-center justify-center overflow-x-clip bg-background py-10 lg:py-0"
     >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/3 bg-primary lg:block"
       />
 
-      <Container>
-        <div className="relative z-20 flex flex-col-reverse items-center justify-center gap-2 xs:gap-2.5 sm:gap-4 lg:min-h-svh lg:flex-row lg:items-end lg:justify-start lg:gap-8 xl:gap-12">
-          <div className="flex w-full min-w-0 flex-initial flex-col items-center justify-center text-center sm:max-w-xl md:max-w-2xl lg:max-w-xl lg:flex-1 lg:items-start lg:self-center lg:text-left xl:max-w-2xl">
+      <Container className="h-full">
+        {/* Branding */}
+        <div className="relative z-20 flex h-full flex-col-reverse items-center justify-center gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-8 xl:gap-12">
+          <div className="flex w-full min-w-0 flex-col items-center justify-center text-center lg:flex-1 lg:items-start lg:self-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               className="w-full text-3xl font-black uppercase leading-none tracking-tight xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
             >
-              <span className="mb-0.5 block text-xs font-bold uppercase tracking-wider text-primary xs:mb-1 sm:text-base lg:mb-2 lg:text-lg xl:text-xl">
+              <span className="mb-1 block text-xs font-bold uppercase tracking-wider text-primary sm:text-base lg:text-lg xl:text-xl">
                 {t('hero.role')}
               </span>
               Ignacio
@@ -39,7 +40,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-              className="max-w-xs text-xs leading-relaxed text-muted-foreground sm:max-w-md sm:text-sm md:max-w-lg lg:text-lg"
+              className="mt-3 max-w-sm text-xs leading-relaxed text-muted-foreground sm:text-sm lg:max-w-lg lg:text-lg"
             >
               <Trans
                 i18nKey="hero.description"
@@ -48,12 +49,12 @@ export function Hero() {
                 }}
               />
             </motion.p>
-
+            {/* Call to Action */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
-              className="mt-2 flex flex-wrap items-center justify-center gap-2 xs:mt-3 xs:gap-2.5 sm:mt-3.5 sm:gap-3 lg:mt-5 lg:justify-start lg:gap-4"
+              className="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
             >
               <Button size="xl">
                 <a href="#projects" className="flex items-center">
@@ -69,17 +70,17 @@ export function Hero() {
               </Button>
             </motion.div>
           </div>
-
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
-            className="flex min-w-0 shrink-0 items-center justify-center self-center lg:self-end lg:justify-end"
+            className="flex shrink-0 items-center justify-center self-center lg:self-end"
           >
             <img
               src={profilePic}
               alt="Ignacio Avendaño"
-              className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 lg:w-96 xl:w-104 grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+              className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 lg:w-96 xl:w-104 grayscale transition duration-300 ease-in-out hover:grayscale-0"
               loading="eager"
               decoding="async"
             />
