@@ -41,6 +41,8 @@ const en = {
     experience: { title: 'Experience' },
     contact: {
       title: 'Contact',
+      reference: 'Architecture is about the things that are hard to change later.',
+      author: '— Martin Fowler (Patterns of Enterprise Application Architecture)',
       socials: 'Socials',
       email: 'Email',
       linkedin: 'LinkedIn',
