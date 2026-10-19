@@ -3,6 +3,7 @@ const en = {
     menu: {
       title: 'Menu',
       close: 'Close',
+      copyright: 'Developed by Ignacio Avendaño',
     },
     hero: {
       title: 'Home',

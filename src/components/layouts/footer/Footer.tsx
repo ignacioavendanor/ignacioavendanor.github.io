@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next'
 
 export function Footer() {
   const { t } = useTranslation()
-  const currentYear = new Date().getFullYear()
 
   return (
     <footer className="w-full bg-foreground text-primary-foreground">
@@ -17,16 +16,14 @@ export function Footer() {
           <a href="#" className="transition-opacity hover:opacity-80" aria-label="Inicio">
             <img src="/icons/logo-light.svg" alt="Logo" className="h-7 w-auto sm:h-8" />
           </a>
-          <Separator orientation="vertical" className="hidden h-4 bg-muted-dark/40 sm:block" />
-          <p className="text-xs text-muted-dark">
-            &copy; {currentYear} Ignacio Avendaño. {t('menu.copyright')}.
-          </p>
+          <Separator orientation="vertical" className="hidden bg-muted-dark/40 sm:block" />
+          <p className="text-xs text-muted-dark">{t('menu.copyright')}</p>
         </div>
 
         {/* Navigation */}
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
           <nav aria-label="Navegación pie de página">
-            <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-medium text-muted-dark capitalize">
+            <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold text-muted-dark capitalize">
               {navigationItems.map((item) => (
                 <li key={item.label}>
                   <a href={`#${item.id}`} className="transition-colors hover:text-primary">
@@ -37,7 +34,7 @@ export function Footer() {
             </ul>
           </nav>
 
-          <Separator orientation="vertical" className="hidden h-4 bg-muted-dark/40 sm:block" />
+          <Separator orientation="vertical" className="hidden bg-muted-dark/40 sm:block" />
 
           {/* Socials */}
           <div className="flex items-center gap-3">
