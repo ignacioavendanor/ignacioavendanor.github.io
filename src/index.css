@@ -79,7 +79,6 @@
   }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
   }
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
