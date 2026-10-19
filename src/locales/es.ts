@@ -41,6 +41,8 @@ const es = {
     experience: { title: 'Experiencia' },
     contact: {
       title: 'Contacto',
+      reference: 'La arquitectura es lo que resulta difícil de cambiar después.',
+      author: '— Martin Fowler (Patterns of Enterprise Application Architecture)',
       socials: 'Redes sociales',
       email: 'Correo electrónico',
       linkedin: 'LinkedIn',
