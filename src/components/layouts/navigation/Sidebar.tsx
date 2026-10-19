@@ -14,12 +14,12 @@ export function Sidebar() {
   const { activeSection, closeMenu } = useNavigation()
 
   return (
-    <div className="flex h-full flex-col bg-foreground text-background overflow-y-auto selection:bg-primary selection:text-background">
+    <div className="flex h-full flex-col bg-foreground text-primary-foreground overflow-y-auto selection:bg-primary selection:text-primary-foreground">
       <div className="flex items-center justify-center px-6 sm:px-10 py-4 sm:py-5 shrink-0">
         <Button
           variant="ghost"
           onClick={closeMenu}
-          className="group gap-2 px-3 py-2 text-background hover:text-muted-accent"
+          className="group gap-2 px-3 py-2 text-primary-foreground hover:text-muted-accent"
         >
           <span className="text-sm tracking-wider">{t('menu.close')}</span>
           <X
@@ -50,7 +50,7 @@ export function Sidebar() {
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   className={cn(
                     'text-3xl sm:text-4xl font-black uppercase tracking-tight transition-colors w-fit block',
-                    isActive ? 'text-primary' : 'text-background hover:text-primary',
+                    isActive ? 'text-primary' : 'text-primary-foreground hover:text-primary',
                   )}
                 >
                   {t(item.label)}
@@ -75,7 +75,7 @@ export function Sidebar() {
           </span>
           <a
             href="mailto:ignacioavendanoramirez@gmail.com"
-            className="text-base sm:text-md font-semibold text-background hover:text-primary transition-colors underline decoration-2 underline-offset-4 w-fit break-all"
+            className="text-base sm:text-md font-semibold text-primary-foreground hover:text-primary transition-colors underline decoration-2 underline-offset-4 w-fit break-all"
           >
             ignacioavendanoramirez@gmail.com
           </a>
@@ -92,7 +92,7 @@ export function Sidebar() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="group inline-flex items-center gap-2 text-background transition-colors hover:text-primary"
+              className="group inline-flex items-center gap-2 text-primary-foreground transition-colors hover:text-primary"
             >
               <FaGithub className="size-6 sm:size-7 shrink-0" />
               <span className="text-sm font-semibold transition-colors">@funktasthic</span>
@@ -104,7 +104,7 @@ export function Sidebar() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="group inline-flex items-center gap-2 text-background transition-colors hover:text-primary"
+              className="group inline-flex items-center gap-2 text-primary-foreground transition-colors hover:text-primary"
             >
               <FaLinkedin className="size-6 sm:size-7 shrink-0" />
               <span className="text-sm font-semibold transition-colors">Ignacio Avendaño</span>
