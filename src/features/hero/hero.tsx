@@ -26,9 +26,9 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="w-full text-3xl font-black uppercase leading-none tracking-tight xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+              className="w-full text-3xl font-extrabold uppercase leading-[0.8] tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
             >
-              <span className="mb-1 block text-xs font-bold uppercase tracking-wider text-primary sm:text-base lg:text-lg xl:text-xl">
+              <span className="mb-2 block text-xs font-bold uppercase tracking-wider text-primary sm:text-base lg:text-lg xl:text-xl">
                 {t('hero.role')}
               </span>
               Ignacio
