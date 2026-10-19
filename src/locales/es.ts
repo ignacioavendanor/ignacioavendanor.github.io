@@ -9,7 +9,7 @@ const es = {
       title: 'Inicio',
       role: 'Ingeniero de Software',
       description:
-        'Conecto <highlight>tecnología, procesos y negocio</highlight> mediante soluciones a medida, transformando problemas operativos complejos en <highlight>resultados prácticos y de alto impacto</highlight>.',
+        'Conecto <highlight>tecnología, procesos y negocio</highlight> mediante soluciones a medida, transformando problemas operativos en <highlight>resultados prácticos y de alto impacto</highlight>.',
       cta: 'Ver proyectos',
       secondarycta: 'Conversemos',
       cv: 'Descargar CV',
