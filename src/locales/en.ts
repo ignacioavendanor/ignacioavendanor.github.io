@@ -38,7 +38,47 @@ const en = {
       },
     },
     projects: { title: 'Projects' },
-    experience: { title: 'Experience' },
+    experience: {
+      title: 'Experience',
+      eyebrow: 'Professional',
+      accent: 'Experience.',
+      vantaz: {
+        company: 'Vantaz Group',
+        role: 'Technology Consultant',
+        period: 'May 2026 - Present',
+        location: 'Antofagasta, Chile',
+        description:
+          'Design, develop, and integrate <highlight>technological solutions</highlight> across .NET Core, Next.js, Azure, and Power Platform to represent <highlight>corporate processes</highlight> and ensure <highlight>operational continuity</highlight>.',
+        techs: ['.NET Core', 'Next.js', 'Azure', 'Power Platform', 'SQL Server'],
+      },
+      nortrans: {
+        company: 'Nortrans',
+        role: 'IT Supervisor',
+        period: 'January 2026 - April 2026',
+        location: 'Antofagasta, Chile',
+        description:
+          'Implemented a <highlight>corporate platform</highlight> using .NET Core and Next.js to unify cross-functional company operations into a single <highlight>centralized ecosystem</highlight>.',
+        techs: ['.NET Core', 'Next.js', 'PostgreSQL'],
+      },
+      metric: {
+        company: 'Metric Studio',
+        role: 'Capstone Project (Software Engineer)',
+        period: 'August 2025 - December 2025',
+        location: 'Antofagasta, Chile',
+        description:
+          'Developed a <highlight>corporate intranet</highlight> with Next.js and Supabase to streamline <highlight>recruitment and personnel management workflows</highlight> for SmartPOS, eliminating information silos and manual tasks.',
+        techs: ['Next.js', 'Supabase', 'PostgreSQL'],
+      },
+      bhp: {
+        company: 'BHP Group Limited',
+        role: 'Data Engineer Intern',
+        period: 'January 2025 - March 2025',
+        location: 'Santiago de Chile, Chile',
+        description:
+          'Designed a <highlight>centralized project dashboard</highlight> in Power BI for the <highlight>Data & Digital</highlight> organization to reduce operational redundancies and maximize the visibility of <highlight>operational and financial impact</highlight>.',
+        techs: ['Power BI', 'SQL', 'Excel', 'Star Schema', 'Data Modeling'],
+      },
+    },
     contact: {
       title: 'Contact',
       reference: 'Architecture is about the things that are hard to change later.',

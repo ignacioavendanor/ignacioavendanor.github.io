@@ -11,6 +11,8 @@ const badgeVariants = cva(
         default: 'bg-primary text-primary-foreground [a]:hover:bg-primary/80',
         outline:
           'border-primary-foreground/10 text-primary-foreground bg-primary-foreground/20 [a]:hover:bg-primary-foreground/10 [a]:hover:text-muted-foreground',
+        experience:
+          'border-primary-foreground/15 bg-primary-foreground/5 text-muted-dark transition-colors duration-300 hover:border-primary/70 hover:bg-primary/20 hover:text-primary-foreground',
       },
     },
     defaultVariants: {

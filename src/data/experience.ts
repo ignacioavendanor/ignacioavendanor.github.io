@@ -11,6 +11,7 @@ export interface ExperienceItem {
   periodKey: `experience.${string}.period`
   locationKey: `experience.${string}.location`
   descriptionKey: `experience.${string}.description`
+  techsKey: `experience.${string}.techs`
 }
 
 export const EXPERIENCES = [
@@ -22,6 +23,7 @@ export const EXPERIENCES = [
     periodKey: 'experience.vantaz.period',
     locationKey: 'experience.vantaz.location',
     descriptionKey: 'experience.vantaz.description',
+    techsKey: 'experience.vantaz.techs',
   },
   {
     id: 'nortrans',
@@ -31,6 +33,7 @@ export const EXPERIENCES = [
     periodKey: 'experience.nortrans.period',
     locationKey: 'experience.nortrans.location',
     descriptionKey: 'experience.nortrans.description',
+    techsKey: 'experience.nortrans.techs',
   },
   {
     id: 'metric-studio',
@@ -40,6 +43,7 @@ export const EXPERIENCES = [
     periodKey: 'experience.metric.period',
     locationKey: 'experience.metric.location',
     descriptionKey: 'experience.metric.description',
+    techsKey: 'experience.metric.techs',
   },
   {
     id: 'bhp',
@@ -49,5 +53,6 @@ export const EXPERIENCES = [
     periodKey: 'experience.bhp.period',
     locationKey: 'experience.bhp.location',
     descriptionKey: 'experience.bhp.description',
+    techsKey: 'experience.bhp.techs',
   },
 ] as const satisfies readonly ExperienceItem[]

@@ -1,5 +1,8 @@
-import type { ReactNode } from 'react'
 import { motion } from 'motion/react'
+import type { ReactNode } from 'react'
+import { Badge } from '@/components/ui/badge'
+import { ExperienceTimeline } from '@/features/experience/experience-timeline'
+import { useTimelineItemScroll } from '@/hooks/useTimelineItemScroll'
 import { cn } from '@/lib/utils'
 
 export interface TimelineEntry {
@@ -8,7 +11,9 @@ export interface TimelineEntry {
   company: string
   period: string
   location: string
-  content: (isHighlighted: boolean) => ReactNode
+  role: string
+  description: ReactNode
+  techs: readonly string[]
 }
 
 interface TimelineItemProps {
@@ -29,12 +34,13 @@ export function TimelineItem({
   setNodeRef,
 }: TimelineItemProps) {
   const isEven = index % 2 === 0
+  const { articleRef, style } = useTimelineItemScroll(isEven)
 
   return (
     <motion.article
-      onPointerEnter={() => onPointerEnter(index)}
-      onPointerLeave={onPointerLeave}
-      className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-6 gap-y-7 py-20 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-0 md:py-28"
+      ref={articleRef}
+      style={style}
+      className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-6 gap-y-7 py-28 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-0 md:py-32"
     >
       <div
         className={cn(
@@ -45,21 +51,17 @@ export function TimelineItem({
         <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-primary">
           {item.period}
         </p>
-        <h3
-          className={cn(
-            'text-2xl font-black tracking-tight transition-colors sm:text-3xl',
-            isHighlighted ? 'text-primary' : 'text-primary-foreground',
-          )}
-        >
+        <h3 className="text-2xl font-black tracking-tight text-primary-foreground sm:text-3xl">
           {item.company}
         </h3>
         <p className="mt-1 text-xs font-medium uppercase tracking-wide text-muted-dark">
           {item.location}
         </p>
       </div>
-
       <div
         ref={setNodeRef}
+        onPointerEnter={() => onPointerEnter(index)}
+        onPointerLeave={onPointerLeave}
         className="relative col-start-1 row-span-2 row-start-1 flex h-24 w-24 items-center justify-center justify-self-center md:col-start-2 md:row-span-1 md:h-28 md:w-28"
       >
         <span
@@ -82,14 +84,20 @@ export function TimelineItem({
           />
         </div>
       </div>
-
       <div
         className={cn(
           'col-start-2 min-w-0 md:row-start-1',
-          isEven ? 'md:col-start-3 md:pl-10' : 'md:col-start-1 md:pr-10',
+          isEven ? 'md:col-start-3 md:pl-10 md:text-left' : 'md:col-start-1 md:pr-10 md:text-right',
         )}
       >
-        {item.content(isHighlighted)}
+        <ExperienceTimeline role={item.role} description={item.description} />
+        <div className={cn('mt-4 flex flex-wrap gap-2', !isEven && 'md:justify-end')}>
+          {item.techs.map((tech) => (
+            <Badge key={tech} variant="experience">
+              {tech}
+            </Badge>
+          ))}
+        </div>
       </div>
     </motion.article>
   )
