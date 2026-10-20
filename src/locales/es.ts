@@ -37,7 +37,24 @@ const es = {
         },
       },
     },
-    projects: { title: 'Proyectos' },
+    projects: {
+      title: 'Proyectos',
+      eyebrow: 'Proyectos',
+      accent: 'Destacados.',
+      viewProject: 'Ver proyecto',
+      portfolio: {
+        title: 'Portafolio personal',
+        description:
+          'Portafolio diseñado como un currículum interactivo para presentar mi trayectoria profesional, proyectos destacados y habilidades técnicas.',
+        techs: ['Vite', 'React', 'Motion'],
+      },
+      sgp: {
+        title: 'Plataforma de Consultoría Corporativa',
+        description:
+          'Plataforma corporativa para gestionar el ciclo de vida de los proyectos de los consultores en Vantaz Group, centralizando planificación, presupuestos y control financiero.',
+        techs: ['Next.js', '.NET Core', 'SQL Server', 'Azure'],
+      },
+    },
     experience: {
       title: 'Experiencia',
       eyebrow: 'Experiencia',

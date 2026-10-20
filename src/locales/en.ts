@@ -37,7 +37,24 @@ const en = {
         },
       },
     },
-    projects: { title: 'Projects' },
+    projects: {
+      title: 'Projects',
+      eyebrow: 'Featured',
+      accent: 'Projects.',
+      viewProject: 'View project',
+      portfolio: {
+        title: 'Personal Portfolio',
+        description:
+          'Interactive portfolio designed as a dynamic resume to showcase my professional background, featured projects, and technical skills.',
+        techs: ['Vite', 'React', 'Motion'],
+      },
+      sgp: {
+        title: 'Corporate Consulting Platform',
+        description:
+          'Corporate platform for managing the project lifecycle of consultants at Vantaz Group, centralizing planning, budgets, and financial control.',
+        techs: ['Next.js', '.NET Core', 'SQL Server', 'Azure'],
+      },
+    },
     experience: {
       title: 'Experience',
       eyebrow: 'Professional',
