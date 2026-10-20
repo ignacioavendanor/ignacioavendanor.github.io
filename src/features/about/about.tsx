@@ -12,10 +12,10 @@ export function About() {
   return (
     <section
       id="about"
-      className="w-full bg-primary py-16 sm:py-20 lg:py-26 text-primary-foreground"
+      className="w-full bg-primary py-16 text-primary-foreground sm:py-20 lg:py-26 2xl:py-48"
     >
       <Container>
-        <div className="grid w-full grid-cols-1 items-center justify-items-center gap-10 md:grid-cols-[auto_1fr] md:justify-items-start lg:gap-14 xl:gap-16">
+        <div className="grid w-full grid-cols-1 items-center justify-items-center gap-10 md:grid-cols-[auto_minmax(0,1fr)] md:justify-items-start lg:gap-14 xl:gap-16 2xl:gap-20">
           {/* Image */}
           <Reveal className="flex w-full items-center justify-center md:w-auto">
             <AboutImage />
@@ -23,22 +23,29 @@ export function About() {
 
           <div className="flex w-full flex-col text-left">
             {/* Heading */}
-            <Reveal className="text-center lg:text-left">
-              <h2 className="text-3xl font-black uppercase tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl">
+            <Reveal y={8} duration={0.35} className="text-center lg:text-left">
+              <h2 className="text-3xl font-black uppercase tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
                 {t('about.title')}
               </h2>
               <Separator className="mt-2 bg-linear-to-r from-primary-foreground to-primary-foreground/10" />
             </Reveal>
 
             {/* CTA */}
-            <div className="order-2 flex w-full justify-center pt-2 sm:pt-4 lg:order-5 lg:w-auto lg:justify-start lg:pt-2">
+            <Reveal
+              delay={0.24}
+              y={6}
+              duration={0.35}
+              className="order-2 flex w-full justify-center pt-2 sm:pt-4 lg:order-5 lg:w-auto lg:justify-start lg:pt-2"
+            >
               <DownloadCVButton />
-            </div>
+            </Reveal>
 
             {/* Description */}
             <Reveal
-              delay={0.05}
-              className="order-1 pt-4 text-sm leading-relaxed text-muted-accent sm:text-base lg:order-1 lg:pt-3 lg:text-lg"
+              delay={0.04}
+              y={8}
+              duration={0.35}
+              className="order-1 pt-4 text-justify text-sm leading-relaxed text-muted-accent sm:text-left sm:text-base lg:order-1 lg:pt-3 lg:text-lg"
             >
               <p>
                 <Trans
@@ -51,19 +58,29 @@ export function About() {
             </Reveal>
 
             {/* Stack */}
-            <Reveal delay={0.1} className="order-3 space-y-1 pt-2 sm:pt-4 lg:order-2 lg:pt-2">
-              <h3 className="text-xs font-bold uppercase tracking-wider sm:text-sm lg:text-lg">
+            <Reveal
+              delay={0.09}
+              y={8}
+              duration={0.35}
+              className="order-3 space-y-2 pt-5 sm:pt-6 lg:order-2 lg:space-y-1 lg:pt-2"
+            >
+              <h3 className="text-xs font-bold uppercase tracking-wider sm:text-sm lg:text-lg 2xl:text-xl">
                 {t('about.technologies')}
               </h3>
               <AboutTechnologies />
             </Reveal>
 
             {/* Education */}
-            <Reveal delay={0.15} className="order-4 pt-2 sm:pt-6 lg:order-3 lg:pt-4">
-              <h3 className="text-xs font-bold uppercase tracking-wider sm:text-sm lg:text-lg">
+            <Reveal
+              delay={0.14}
+              y={8}
+              duration={0.35}
+              className="order-4 pt-6 sm:pt-7 lg:order-3 lg:pt-4"
+            >
+              <h3 className="text-xs font-bold uppercase tracking-wider sm:text-sm lg:text-lg 2xl:text-2xl">
                 {t('about.education.title')}
               </h3>
-              <p className="text-xs leading-relaxed text-primary-foreground sm:text-sm lg:text-base">
+              <p className="text-xs leading-relaxed text-primary-foreground sm:text-sm lg:text-base 2xl:text-xl">
                 {t('about.education.degree')}
                 <br />
                 <span className="text-muted-accent">{t('about.education.institution')}</span>
@@ -71,11 +88,16 @@ export function About() {
             </Reveal>
 
             {/* Languages */}
-            <Reveal delay={0.2} className="order-5 pt-4 sm:pt-6 lg:order-4 lg:pt-2.5">
-              <h3 className="text-xs font-bold uppercase tracking-wider sm:text-sm lg:text-lg">
+            <Reveal
+              delay={0.19}
+              y={8}
+              duration={0.35}
+              className="order-5 pt-6 sm:pt-7 lg:order-4 lg:pt-2.5"
+            >
+              <h3 className="text-xs font-bold uppercase tracking-wider sm:text-sm lg:text-lg 2xl:text-2xl">
                 {t('about.languages.title')}
               </h3>
-              <p className="text-xs leading-relaxed text-primary-foreground sm:text-sm lg:text-base">
+              <p className="text-xs leading-relaxed text-primary-foreground sm:text-sm lg:text-base 2xl:text-xl">
                 {t('about.languages.native.name')}
                 <span className="text-muted-accent"> • {t('about.languages.native.level')}</span>
                 <br />

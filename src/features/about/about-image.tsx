@@ -5,7 +5,7 @@ export function AboutImage() {
   const { t } = useTranslation()
 
   return (
-    <div className="group relative aspect-4/5 w-44 xs:w-52 sm:w-60 md:w-80 lg:w-96 xl:w-102 overflow-hidden shadow-2xl">
+    <div className="group relative aspect-4/5 w-44 overflow-hidden shadow-2xl xs:w-52 sm:w-60 md:w-80 lg:w-96 xl:w-102 2xl:w-104">
       <img
         src={aboutMe}
         alt={t('about.title')}
