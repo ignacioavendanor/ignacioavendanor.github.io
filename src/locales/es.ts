@@ -38,7 +38,47 @@ const es = {
       },
     },
     projects: { title: 'Proyectos' },
-    experience: { title: 'Experiencia' },
+    experience: {
+      title: 'Experiencia',
+      eyebrow: 'Experiencia',
+      accent: 'Profesional.',
+      vantaz: {
+        company: 'Vantaz Group',
+        role: 'Consultor de Tecnología',
+        period: 'Mayo 2026 - Presente',
+        location: 'Antofagasta, Chile',
+        description:
+          'Diseño, desarrollo e integro <highlight>soluciones tecnológicas</highlight> en .NET Core, Next.js, Azure y Power Platform para representar <highlight>procesos corporativos</highlight> y garantizar la <highlight>continuidad operacional</highlight>.',
+        techs: ['.NET Core', 'Next.js', 'Azure', 'Power Platform', 'SQL Server'],
+      },
+      nortrans: {
+        company: 'Nortrans',
+        role: 'Supervisor TI',
+        period: 'Enero 2026 - Abril 2026',
+        location: 'Antofagasta, Chile',
+        description:
+          'Implementé una <highlight>plataforma corporativa</highlight> en .NET Core y Next.js para unificar la operación transversal de la compañía en una única <highlight>plataforma centralizada</highlight>.',
+        techs: ['.NET Core', 'Next.js', 'PostgreSQL'],
+      },
+      metric: {
+        company: 'Metric Studio',
+        role: 'Capstone Project (Ingeniero de Software)',
+        period: 'Agosto 2025 - Diciembre 2025',
+        location: 'Antofagasta, Chile',
+        description:
+          'Desarrollé una <highlight>intranet corporativa</highlight> con Next.js, Supabase para gestionar los procesos de <highlight>reclutamiento y gestión del personal</highlight> de SmartPOS, eliminando la dispersión de información y tareas manuales.',
+        techs: ['Next.js', 'Supabase', 'PostgreSQL'],
+      },
+      bhp: {
+        company: 'BHP Group Limited',
+        role: 'Práctica (Ingeniero de Datos)',
+        period: 'Enero 2025 - Marzo 2025',
+        location: 'Santiago de Chile, Chile',
+        description:
+          'Diseñé un <highlight>dashboard de centralización</highlight> de proyectos tecnológicos en Power BI para el área de <highlight>Data & Digital</highlight> con el fin de reducir redundancias operativas y maximizar la visibilidad del <highlight>impacto operativo y financiero</highlight>.',
+        techs: ['Power BI', 'SQL', 'Excel', 'Star Schema', 'Data Modeling'],
+      },
+    },
     contact: {
       title: 'Contacto',
       reference: 'La arquitectura es lo que resulta difícil de cambiar después.',
