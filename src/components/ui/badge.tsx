@@ -13,6 +13,8 @@ const badgeVariants = cva(
           'border-primary-foreground/10 text-primary-foreground bg-primary-foreground/20 [a]:hover:bg-primary-foreground/10 [a]:hover:text-muted-foreground',
         experience:
           'border-primary-foreground/15 bg-primary-foreground/5 text-muted-dark transition-colors duration-300 hover:border-primary/70 hover:bg-primary/20 hover:text-primary-foreground',
+        project:
+          'border-primary/20 bg-primary/5 text-muted-foreground transition-colors duration-300 hover:border-primary/50 hover:bg-primary/10 hover:text-primary',
       },
     },
     defaultVariants: {
