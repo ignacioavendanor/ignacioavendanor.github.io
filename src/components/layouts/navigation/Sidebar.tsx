@@ -17,11 +17,7 @@ export function Sidebar() {
     <div className="flex h-svh flex-col bg-foreground text-primary-foreground overflow-hidden selection:bg-primary selection:text-primary-foreground">
       {/* Header */}
       <div className="flex items-center justify-center px-6 sm:px-10 py-2.5 shrink-0">
-        <Button
-          variant="ghost"
-          onClick={closeMenu}
-          className="group gap-2 px-3 py-1 h-auto text-primary-foreground hover:text-muted-accent"
-        >
+        <Button variant="control" onClick={closeMenu} className="group gap-2 px-3 py-1 h-auto">
           <span className="text-sm sm:text-base font-medium tracking-wider">{t('menu.close')}</span>
           <X
             className="size-5 sm:size-6 transition-transform duration-200 group-hover:rotate-90"

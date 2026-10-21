@@ -1,5 +1,3 @@
-import { AnimatePresence } from 'motion/react'
-
 import { Preloader } from './components/layouts/preloader/Preloader'
 import { Navbar } from './components/layouts/navigation/Navbar'
 import { Footer } from './components/layouts/footer/Footer'
@@ -22,10 +20,16 @@ function App() {
   const { isPreloader } = usePreloader()
   const activeSection = useScrollSpy(sectionIds)
 
+  if (isPreloader) {
+    return (
+      <NavigationProvider activeSection={activeSection}>
+        <Preloader />
+      </NavigationProvider>
+    )
+  }
+
   return (
     <NavigationProvider activeSection={activeSection}>
-      <AnimatePresence>{isPreloader && <Preloader key="preloader" />}</AnimatePresence>
-
       <div className="flex min-h-svh flex-col">
         <Navbar />
 

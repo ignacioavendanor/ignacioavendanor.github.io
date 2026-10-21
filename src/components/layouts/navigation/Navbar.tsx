@@ -8,11 +8,13 @@ import { useNavigation } from '@/hooks/useNavigation'
 import { useScroll } from '@/hooks/useScroll'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
+import { Container } from '@/components/layouts/Container'
 
 export function Navbar() {
-  const { isOpen, setMenuOpen } = useNavigation()
+  const { isOpen, setMenuOpen, activeSection } = useNavigation()
   const isScrolled = useScroll(20)
   const { t } = useTranslation()
+  const usesLightForeground = ['about', 'experience', 'contact'].includes(activeSection)
 
   return (
     <header
@@ -21,24 +23,37 @@ export function Navbar() {
         isScrolled ? 'backdrop-blur-md shadow-sm' : 'bg-transparent',
       )}
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-4">
+      <Container className="flex items-center justify-between py-4">
         <a href="#" className="flex items-center">
-          <img src="/icons/logo-dark.svg" alt="IA Logo" className="h-8 w-auto" />
+          <img
+            src={`/icons/logo-${usesLightForeground ? 'light' : 'dark'}.svg`}
+            alt="IA Logo"
+            className="h-8 w-auto"
+          />
         </a>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div
+          className={cn(
+            'flex items-center gap-2 sm:gap-3',
+            activeSection === 'home' || !activeSection
+              ? 'text-primary lg:text-primary-foreground'
+              : usesLightForeground
+                ? 'text-primary-foreground'
+                : 'text-primary',
+          )}
+        >
           <LanguageToggle />
 
           <div className="flex items-center self-stretch py-2">
-            <Separator orientation="vertical" className="bg-foreground" />
+            <Separator orientation="vertical" className="bg-current/30" />
           </div>
 
           <Sheet open={isOpen} onOpenChange={setMenuOpen}>
             <Button
-              variant="ghost"
+              variant="control"
               size="sm"
               onClick={() => setMenuOpen(true)}
-              className="text-sm"
+              className="text-sm text-inherit"
               aria-label={t('menu.title')}
             >
               <span className="hidden md:inline-block mr-2">{t('menu.title')}</span>
@@ -54,7 +69,7 @@ export function Navbar() {
             </SheetContent>
           </Sheet>
         </div>
-      </div>
+      </Container>
     </header>
   )
 }
