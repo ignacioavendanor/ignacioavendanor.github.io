@@ -3,7 +3,7 @@ import { Mail } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export interface SocialLink {
-  id: string
+  id: 'email' | 'linkedin' | 'github'
   href: string
   icon: ElementType
 }
@@ -21,7 +21,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     id: 'github',
-    href: 'https://github.com/funktasthic',
+    href: 'https://github.com/ignacioavendanor',
     icon: FaGithub,
   },
 ]

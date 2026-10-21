@@ -1,9 +1,4 @@
-export interface NavigationItem {
-  id: string
-  label: string
-}
-
-export const navigationItems: NavigationItem[] = [
+export const navigationItems = [
   {
     id: 'home',
     label: 'hero.title',
@@ -24,4 +19,4 @@ export const navigationItems: NavigationItem[] = [
     id: 'contact',
     label: 'contact.title',
   },
-]
+] as const
