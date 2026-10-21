@@ -1,6 +1,6 @@
-import { motion } from 'motion/react'
 import { Container } from '@/components/layouts/Container'
 import { Button } from '@/components/ui/button'
+import { Reveal } from '@/components/ui/reveal'
 import { ArrowUpRight } from 'lucide-react'
 import profilePic from '@/assets/images/profile-picture.webp'
 import { Trans, useTranslation } from 'react-i18next'
@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-svh lg:h-svh items-center justify-center overflow-x-clip bg-background py-10 lg:py-0"
+      className="relative flex min-h-svh items-center justify-center overflow-x-clip bg-background py-10 lg:h-svh lg:py-0"
     >
       <div
         aria-hidden="true"
@@ -19,41 +19,40 @@ export function Hero() {
       />
 
       <Container className="h-full">
-        {/* Branding */}
         <div className="relative z-20 flex h-full flex-col-reverse items-center justify-center gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-8 xl:gap-12">
           <div className="flex w-full min-w-0 flex-col items-center justify-center text-center lg:flex-1 lg:items-start lg:self-center lg:text-left">
-            <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="w-full text-3xl font-extrabold uppercase leading-[0.8] tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
-            >
-              <span className="mb-2 block text-xs font-bold uppercase tracking-wider text-primary sm:text-base lg:text-lg xl:text-xl">
-                {t('hero.role')}
-              </span>
-              Ignacio
-              <br />
-              Avendaño
-            </motion.h1>
+            <Reveal y={28} scale={0.96} delay={0.05} duration={0.55} className="w-full">
+              <h1 className="w-full text-3xl font-extrabold uppercase tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+                <span className="mb-4 block text-xs font-bold uppercase leading-normal tracking-wider text-primary sm:mb-5 sm:text-base lg:text-lg xl:text-xl">
+                  {t('hero.role')}
+                </span>
+                Ignacio
+                <br />
+                Avendaño
+              </h1>
+            </Reveal>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-              className="mt-3 max-w-sm text-xs leading-relaxed text-muted-foreground sm:text-sm lg:max-w-lg lg:text-lg"
+            <Reveal
+              y={18}
+              x={-8}
+              delay={0.12}
+              duration={0.45}
+              className="mt-2 max-w-sm sm:max-w-none lg:max-w-lg"
             >
-              <Trans
-                i18nKey="hero.description"
-                components={{
-                  highlight: <span className="font-semibold text-primary" />,
-                }}
-              />
-            </motion.p>
-            {/* Call to Action */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+              <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-lg">
+                <Trans
+                  i18nKey="hero.description"
+                  components={{
+                    highlight: <span className="font-semibold text-primary" />,
+                  }}
+                />
+              </p>
+            </Reveal>
+
+            <Reveal
+              delay={0.2}
+              y={18}
+              duration={0.45}
               className="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
             >
               <Button size="xl">
@@ -68,23 +67,24 @@ export function Hero() {
                   {t('hero.secondarycta')}
                 </a>
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
+
+          <Reveal
+            delay={0.18}
+            y={32}
+            scale={0.94}
+            duration={0.65}
             className="flex shrink-0 items-center justify-center self-center lg:self-end"
           >
             <img
               src={profilePic}
               alt="Ignacio Avendaño"
-              className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 lg:w-93 xl:w-104 grayscale transition duration-300 ease-in-out hover:grayscale-0"
+              className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 lg:w-93 xl:w-104 2xl:w-116 grayscale transition duration-300 ease-in-out hover:grayscale-0"
               loading="eager"
               decoding="async"
             />
-          </motion.div>
+          </Reveal>
         </div>
       </Container>
     </section>

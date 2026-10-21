@@ -49,10 +49,10 @@ const en = {
         techs: ['Vite', 'React', 'Motion'],
       },
       sgp: {
-        title: 'Corporate Consulting Platform',
+        title: 'Management Consulting System',
         description:
           'Corporate platform for managing the project lifecycle of consultants at Vantaz Group, centralizing planning, budgets, and financial control.',
-        techs: ['Next.js', '.NET Core', 'SQL Server', 'Azure'],
+        techs: ['Next.js', '.NET Core', 'SQL Server', 'Azure', 'Redis'],
       },
     },
     experience: {

@@ -1,9 +1,8 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Container } from '../Container'
-import { Mail } from 'lucide-react'
 import { navigationItems } from '@/config/navigation'
 import { Separator } from '@/components/ui/separator'
 import { useTranslation } from 'react-i18next'
+import { SOCIAL_LINKS } from '@/data/social-links'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -37,33 +36,26 @@ export function Footer() {
           <Separator orientation="vertical" className="hidden bg-muted-dark/40 sm:block" />
 
           {/* Socials */}
-          <div className="flex items-center gap-3">
-            <a
-              href="https://github.com/funktasthic"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              className="text-primary-foreground transition-colors hover:text-primary"
-            >
-              <FaGithub className="size-5" />
-            </a>
-            <a
-              href="https://linkedin.com/in/ignacioavr"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="text-primary-foreground transition-colors hover:text-primary"
-            >
-              <FaLinkedin className="size-5" />
-            </a>
-            <a
-              href="mailto:ignacioavendanoramirez@gmail.com"
-              aria-label="Email"
-              className="text-primary-foreground transition-colors hover:text-primary"
-            >
-              <Mail className="size-5" />
-            </a>
-          </div>
+          {SOCIAL_LINKS.map((link) => {
+            const isEmail = link.id === 'email'
+            const IconComponent = link.icon
+
+            return (
+              <div key={link.id} className="group flex flex-col">
+                <a
+                  href={link.href}
+                  target={isEmail ? undefined : '_blank'}
+                  rel={isEmail ? undefined : 'noreferrer'}
+                  aria-label={t(`contact.${link.id}`)}
+                  className="flex w-full items-center justify-between py-1 transition-colors"
+                >
+                  <span className="flex items-center gap-2.5 text-primary-foreground transition-colors group-hover:text-primary">
+                    {IconComponent && <IconComponent className="size-5" />}
+                  </span>
+                </a>
+              </div>
+            )
+          })}
         </div>
       </Container>
     </footer>

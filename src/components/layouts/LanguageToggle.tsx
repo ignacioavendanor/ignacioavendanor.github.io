@@ -14,9 +14,9 @@ export function LanguageToggle() {
   return (
     <Button
       onClick={toggleLanguage}
-      variant="ghost"
+      variant="control"
       size={'lg'}
-      className="uppercase cursor-pointer transition-colors"
+      className="cursor-pointer uppercase text-inherit transition-colors"
     >
       {currentLanguage === 'es' ? 'ES' : 'EN'}
     </Button>
