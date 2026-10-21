@@ -49,10 +49,10 @@ const es = {
         techs: ['Vite', 'React', 'Motion'],
       },
       sgp: {
-        title: 'Plataforma de Consultoría Corporativa',
+        title: 'Sistema de Gestión de Consultoría',
         description:
           'Plataforma corporativa para gestionar el ciclo de vida de los proyectos de los consultores en Vantaz Group, centralizando planificación, presupuestos y control financiero.',
-        techs: ['Next.js', '.NET Core', 'SQL Server', 'Azure'],
+        techs: ['Next.js', '.NET Core', 'SQL Server', 'Azure', 'Redis'],
       },
     },
     experience: {
