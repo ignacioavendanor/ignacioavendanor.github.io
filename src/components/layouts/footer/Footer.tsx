@@ -13,7 +13,13 @@ export function Footer() {
         {/* Logo */}
         <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:gap-4 sm:text-left">
           <a href="#" className="transition-opacity hover:opacity-80" aria-label="Inicio">
-            <img src="/icons/logo-light.svg" alt="Logo" className="h-7 w-auto sm:h-8" />
+            <img
+              src="/icons/logo-light.svg"
+              alt="Logo"
+              loading="lazy"
+              decoding="async"
+              className="h-7 w-auto sm:h-8"
+            />
           </a>
           <Separator orientation="vertical" className="hidden bg-muted-dark/40 sm:block" />
           <p className="text-xs text-muted-dark">{t('menu.copyright')}</p>
