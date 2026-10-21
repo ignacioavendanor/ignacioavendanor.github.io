@@ -17,13 +17,13 @@ export function About() {
       <Container>
         <div className="grid w-full grid-cols-1 items-center justify-items-center gap-10 md:grid-cols-[auto_minmax(0,1fr)] md:justify-items-start lg:gap-14 xl:gap-16 2xl:gap-20">
           {/* Image */}
-          <Reveal className="flex w-full items-center justify-center md:w-auto">
+          <Reveal y={14} scale={0.96} delay={0.08} duration={0.45} className="flex w-full items-center justify-center md:w-auto">
             <AboutImage />
           </Reveal>
 
           <div className="flex w-full flex-col text-left">
             {/* Heading */}
-            <Reveal y={8} duration={0.35} className="text-center lg:text-left">
+            <Reveal y={10} x={-6} duration={0.35} className="text-center lg:text-left">
               <h2 className="text-3xl font-black uppercase tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
                 {t('about.title')}
               </h2>
@@ -33,7 +33,8 @@ export function About() {
             {/* CTA */}
             <Reveal
               delay={0.24}
-              y={6}
+              y={8}
+              scale={0.98}
               duration={0.35}
               className="order-2 flex w-full justify-center pt-2 sm:pt-4 lg:order-5 lg:w-auto lg:justify-start lg:pt-2"
             >
@@ -43,7 +44,8 @@ export function About() {
             {/* Description */}
             <Reveal
               delay={0.04}
-              y={8}
+              y={10}
+              scale={0.98}
               duration={0.35}
               className="order-1 pt-4 text-justify text-sm leading-relaxed text-muted-accent sm:text-left sm:text-base lg:order-1 lg:pt-3 lg:text-lg"
             >
@@ -60,7 +62,8 @@ export function About() {
             {/* Stack */}
             <Reveal
               delay={0.09}
-              y={8}
+              y={10}
+              scale={0.98}
               duration={0.35}
               className="order-3 space-y-2 pt-5 sm:pt-6 lg:order-2 lg:space-y-1 lg:pt-2"
             >
@@ -73,7 +76,8 @@ export function About() {
             {/* Education */}
             <Reveal
               delay={0.14}
-              y={8}
+              y={10}
+              scale={0.98}
               duration={0.35}
               className="order-4 pt-6 sm:pt-7 lg:order-3 lg:pt-4"
             >
@@ -90,7 +94,8 @@ export function About() {
             {/* Languages */}
             <Reveal
               delay={0.19}
-              y={8}
+              y={10}
+              scale={0.98}
               duration={0.35}
               className="order-5 pt-6 sm:pt-7 lg:order-4 lg:pt-2.5"
             >

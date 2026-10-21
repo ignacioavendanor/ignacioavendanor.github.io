@@ -3,6 +3,7 @@ import { Container } from '@/components/layouts/Container'
 import { Separator } from '@/components/ui/separator'
 import { SOCIAL_LINKS } from '@/data/social-links'
 import { ArrowUpRight } from 'lucide-react'
+import { Reveal } from '@/components/ui/reveal'
 
 export function Contact() {
   const { t } = useTranslation()
@@ -23,37 +24,45 @@ export function Contact() {
               IA
             </span>
 
-            <div className="relative z-10">
+            <Reveal y={10} duration={0.4} className="relative z-10">
               <h1 className="text-6xl font-black tracking-tight uppercase leading-none text-primary-foreground sm:text-7xl md:text-8xl">
                 {t('contact.title')}
               </h1>
-            </div>
+            </Reveal>
 
-            <p className="relative z-10 max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-base">
-              <span className="font-semibold text-primary-foreground">
-                “{t('contact.reference')}”
-              </span>
-              {t('contact.author')}
-            </p>
+            <Reveal delay={0.1} y={6} duration={0.35} className="relative z-10">
+              <p className="max-w-lg text-sm leading-relaxed text-muted-dark sm:text-base">
+                <span className="font-semibold text-primary-foreground">
+                  “{t('contact.reference')}”
+                </span>
+                {t('contact.author')}
+              </p>
+            </Reveal>
           </div>
 
           <div className="flex flex-col justify-center w-full space-y-6 lg:col-span-5">
-            {SOCIAL_LINKS.map((link) => (
-              <div key={link.id} className="group flex flex-col">
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex w-full items-center justify-between pb-1.5 text-lg font-bold tracking-wider text-primary-foreground transition-colors hover:text-primary sm:text-xl"
-                >
-                  <span className="uppercase transition-colors group-hover:text-primary">
-                    {t(`contact.${link.id}`)}
-                  </span>
-                  <ArrowUpRight className="h-5 w-5 text-primary-foreground transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
-                </a>
-                <Separator className="bg-linear-to-r from-primary-foreground to-primary-foreground/10 group-hover:bg-linear-to-r group-hover:from-primary group-hover:to-primary/10" />
-              </div>
-            ))}
+            {SOCIAL_LINKS.map((link, index) => {
+              const isEmail = link.id === 'email'
+
+              return (
+                <Reveal key={link.id} delay={0.08 + index * 0.07} y={8} duration={0.35}>
+                  <div className="group flex flex-col">
+                    <a
+                      href={link.href}
+                      target={isEmail ? undefined : '_blank'}
+                      rel={isEmail ? undefined : 'noreferrer'}
+                      className="flex w-full items-center justify-between pb-1.5 text-lg font-bold tracking-wider text-primary-foreground transition-colors hover:text-primary sm:text-xl"
+                    >
+                      <span className="uppercase transition-colors group-hover:text-primary">
+                        {t(`contact.${link.id}`)}
+                      </span>
+                      <ArrowUpRight className="h-5 w-5 text-primary-foreground transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
+                    </a>
+                    <Separator className="bg-linear-to-r from-primary-foreground to-primary-foreground/10 group-hover:bg-linear-to-r group-hover:from-primary group-hover:to-primary/10" />
+                  </div>
+                </Reveal>
+              )
+            })}
           </div>
         </div>
       </Container>
