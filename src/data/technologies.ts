@@ -1,5 +1,4 @@
 export const TECHNOLOGIES = [
-  'React',
   'Next.js',
   '.NET Core',
   'Python',
