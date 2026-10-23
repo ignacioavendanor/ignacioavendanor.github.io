@@ -77,6 +77,8 @@ export function TimelineItem({
             <img
               src={item.logo}
               alt={`${item.company} logo`}
+              loading="lazy"
+              decoding="async"
               className="max-h-14 max-w-14 object-contain md:max-h-16 md:max-w-16"
             />
           </div>

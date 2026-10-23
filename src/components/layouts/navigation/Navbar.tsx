@@ -28,6 +28,8 @@ export function Navbar() {
           <img
             src={`/icons/logo-${usesLightForeground ? 'light' : 'dark'}.svg`}
             alt="IA Logo"
+            loading="eager"
+            decoding="async"
             className="h-8 w-auto"
           />
         </a>
