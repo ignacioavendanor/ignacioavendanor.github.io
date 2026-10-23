@@ -31,15 +31,9 @@ export function About() {
             </Reveal>
 
             {/* CTA */}
-            <Reveal
-              delay={0.24}
-              y={8}
-              scale={0.98}
-              duration={0.35}
-              className="order-2 flex w-full justify-center pt-2 sm:pt-4 lg:order-5 lg:w-auto lg:justify-start lg:pt-2"
-            >
+            <div className="order-2 flex w-full justify-center pt-2 sm:pt-4 lg:order-5 lg:w-auto lg:justify-start lg:pt-2">
               <DownloadCVButton />
-            </Reveal>
+            </div>
 
             {/* Description */}
             <Reveal

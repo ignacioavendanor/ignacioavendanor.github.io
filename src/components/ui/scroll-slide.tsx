@@ -22,9 +22,9 @@ export function ScrollSlide({ children, direction, className }: ScrollSlideProps
     offset: ['start 50%', 'start 45%'],
   })
   const progress = useSpring(scrollYProgress, { stiffness: 130, damping: 28, mass: 0.5 })
-  const offset = direction === 'left' ? -112 : 112
+  const offset = direction === 'left' ? -32 : 32
   const x = useTransform(progress, [0, 1], [offset, 0])
-  const opacity = useTransform(progress, [0, 0.8, 1], [0, 0.8, 1])
+  const opacity = useTransform(progress, [0, 0.8, 1], [0.5, 0.85, 1])
 
   return (
     <motion.div

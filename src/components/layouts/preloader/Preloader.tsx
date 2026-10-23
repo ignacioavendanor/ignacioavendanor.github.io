@@ -1,4 +1,4 @@
-import { motion, type Variants } from 'motion/react'
+import { motion, useReducedMotion, type Variants } from 'motion/react'
 
 const FIRST_NAME = 'IGNACIO'.split('')
 const LAST_NAME = 'AVENDAÑO'.split('')
@@ -8,7 +8,7 @@ const containerVariants: Variants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.06,
+      staggerChildren: 0.02,
     },
   },
 }
@@ -17,23 +17,25 @@ const letterVariants: Variants = {
   hidden: { opacity: 0.2 },
   show: {
     opacity: 1,
-    transition: { duration: 0.3 },
+    transition: { duration: 0.15 },
   },
 }
 
 export function Preloader() {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <motion.div
       className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 bg-background overflow-hidden"
       initial={{ y: 0 }}
       animate={{ y: 0 }}
-      exit={{ y: '-100%' }}
-      transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+      exit={shouldReduceMotion ? undefined : { y: '-100%' }}
+      transition={{ duration: shouldReduceMotion ? 0 : 0.2, ease: [0.76, 0, 0.24, 1] }}
     >
       <motion.h1
         variants={containerVariants}
-        initial="hidden"
-        animate="show"
+        initial={shouldReduceMotion ? false : 'hidden'}
+        animate={shouldReduceMotion ? undefined : 'show'}
         className="text-center text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase leading-none select-none"
         style={{
           color: 'var(--background)',

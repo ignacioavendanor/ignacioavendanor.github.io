@@ -1,7 +1,14 @@
 import { useRef, useState } from 'react'
-import { useMotionValue, useMotionValueEvent, useScroll, useSpring } from 'motion/react'
+import {
+  useMotionValue,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+} from 'motion/react'
 
 export function useTimelineProgress() {
+  const shouldReduceMotion = useReducedMotion()
   const trackRef = useRef<HTMLDivElement>(null)
   const nodeRefs = useRef<(HTMLDivElement | null)[]>([])
   const isHovered = useRef(false)
@@ -13,7 +20,8 @@ export function useTimelineProgress() {
   })
 
   const targetProgress = useMotionValue(0)
-  const activeProgress = useSpring(targetProgress, { stiffness: 120, damping: 20 })
+  const springProgress = useSpring(targetProgress, { stiffness: 120, damping: 20 })
+  const activeProgress = shouldReduceMotion ? targetProgress : springProgress
 
   const getHighlightedIndex = (progress: number) => {
     const track = trackRef.current
