@@ -89,7 +89,7 @@ const en = {
       },
       bhp: {
         company: 'BHP Group Limited',
-        role: 'Data Engineer Intern',
+        role: 'Data Engineer Intern (Data & Digital)',
         period: 'January 2025 - March 2025',
         location: 'Santiago de Chile, Chile',
         description:

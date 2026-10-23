@@ -80,7 +80,7 @@ const es = {
       },
       metric: {
         company: 'Metric Studio',
-        role: 'Capstone Project (Ingeniero de Software)',
+        role: 'Capstone Project - Ingeniero de Software',
         period: 'Agosto 2025 - Diciembre 2025',
         location: 'Antofagasta, Chile',
         description:
@@ -89,7 +89,7 @@ const es = {
       },
       bhp: {
         company: 'BHP Group Limited',
-        role: 'Práctica (Ingeniero de Datos)',
+        role: 'Práctica Profesional (Data & Digital) - Ingeniero de Datos',
         period: 'Enero 2025 - Marzo 2025',
         location: 'Santiago de Chile, Chile',
         description:
