@@ -13,6 +13,7 @@ const en = {
       cta: 'View projects',
       secondarycta: 'Get in touch',
       cv: 'Download CV',
+      cvUnavailable: 'CV unavailable',
       download: 'Downloading...',
     },
     about: {

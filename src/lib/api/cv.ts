@@ -1,7 +1,13 @@
 import { api } from '@/lib/api/axios'
-import { env } from '@/lib/env'
+import { env, isCvDownloadConfigured } from '@/lib/env'
 
 export async function downloadCv(): Promise<Blob> {
+  if (!isCvDownloadConfigured) {
+    throw new Error(
+      'CV download is unavailable. Configure VITE_GOOGLE_API_KEY and VITE_GOOGLE_CV_FILE_ID.',
+    )
+  }
+
   try {
     const { data } = await api.get<Blob>(
       `/drive/v3/files/${encodeURIComponent(env.GOOGLE_CV_FILE_ID)}/export`,
