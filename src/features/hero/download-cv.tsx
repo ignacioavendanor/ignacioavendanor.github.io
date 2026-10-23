@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { motion } from 'motion/react'
 import { downloadCv } from '@/lib/api/cv'
 import { downloadBlob } from '@/lib/download'
+import { isCvDownloadConfigured } from '@/lib/env'
 
 const MotionButton = motion.create(Button)
 
@@ -30,7 +31,9 @@ export function DownloadCVButton() {
       size="xl"
       variant="secondary"
       onClick={handleDownload}
-      disabled={isDownloading}
+      disabled={isDownloading || !isCvDownloadConfigured}
+      title={!isCvDownloadConfigured ? t('hero.cvUnavailable') : undefined}
+      aria-label={!isCvDownloadConfigured ? t('hero.cvUnavailable') : undefined}
       initial="initial"
       whileHover={isDownloading ? 'initial' : 'hover'}
       whileTap={isDownloading ? 'initial' : 'tap'}
@@ -42,7 +45,13 @@ export function DownloadCVButton() {
       transition={{ type: 'spring', stiffness: 500, damping: 25 }}
       className="inline-flex items-center gap-2 cursor-pointer transition-shadow duration-200 hover:shadow-md"
     >
-      <span>{isDownloading ? t('hero.download') : t('hero.cv')}</span>
+      <span>
+        {isDownloading
+          ? t('hero.download')
+          : isCvDownloadConfigured
+            ? t('hero.cv')
+            : t('hero.cvUnavailable')}
+      </span>
 
       {isDownloading ? (
         <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
