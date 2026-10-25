@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ScrollSlide } from '@/components/ui/scroll-slide'
 import { cn } from '@/lib/utils'
+import { useReducedMotion, useInView } from 'motion/react'
+import { useRef } from 'react'
 
 export interface ProjectCardData {
   id: string
@@ -41,13 +43,18 @@ interface ProjectCardItemProps {
 
 function ProjectCardItem({ project, index, viewProjectLabel }: ProjectCardItemProps) {
   const isReversed = index % 2 !== 0
+  const imageRef = useRef<HTMLDivElement>(null)
+  const isImageInView = useInView(imageRef, { once: true, amount: 0.35 })
+  const shouldReduceMotion = useReducedMotion()
+  const showImageInColor = shouldReduceMotion || isImageInView
 
   return (
     <ScrollSlide
       direction={isReversed ? 'right' : 'left'}
-      className={cn('group mx-auto grid max-w-6xl items-center gap-5 md:grid-cols-2 md:gap-10')}
+      className={cn('mx-auto grid max-w-6xl items-center gap-5 md:grid-cols-2 md:gap-10')}
     >
       <div
+        ref={imageRef}
         className={cn(
           'flex min-w-0 items-center justify-center overflow-hidden',
           isReversed && 'md:order-2',
@@ -58,7 +65,10 @@ function ProjectCardItem({ project, index, viewProjectLabel }: ProjectCardItemPr
           alt={project.title}
           loading="lazy"
           decoding="async"
-          className="h-auto max-h-[42svh] w-full object-contain grayscale transition-[filter] duration-500 ease-out group-hover:grayscale-0"
+          className={cn(
+            'h-auto max-h-[42svh] w-full object-contain transition-[filter] duration-500 ease-out motion-reduce:transition-none',
+            showImageInColor ? 'grayscale-0' : 'grayscale',
+          )}
         />
       </div>
 
