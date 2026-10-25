@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import aboutMe from '@/assets/images/about-me.webp'
+import aboutMe from '@/assets/images/about/about-me.webp'
 
 export function AboutImage() {
   const { t } = useTranslation()
