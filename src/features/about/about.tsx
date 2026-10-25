@@ -12,12 +12,18 @@ export function About() {
   return (
     <section
       id="about"
-      className="w-full bg-primary py-16 text-primary-foreground sm:py-20 lg:py-26 2xl:py-48"
+      className="w-full bg-primary py-20 text-primary-foreground sm:py-24 lg:py-26 2xl:py-48"
     >
       <Container>
         <div className="grid w-full grid-cols-1 items-center justify-items-center gap-10 md:grid-cols-[auto_minmax(0,1fr)] md:justify-items-start lg:gap-14 xl:gap-16 2xl:gap-20">
           {/* Image */}
-          <Reveal y={14} scale={0.96} delay={0.08} duration={0.45} className="flex w-full items-center justify-center md:w-auto">
+          <Reveal
+            y={14}
+            scale={0.96}
+            delay={0.08}
+            duration={0.45}
+            className="flex w-full items-center justify-center md:w-auto"
+          >
             <AboutImage />
           </Reveal>
 
@@ -31,15 +37,9 @@ export function About() {
             </Reveal>
 
             {/* CTA */}
-            <Reveal
-              delay={0.24}
-              y={8}
-              scale={0.98}
-              duration={0.35}
-              className="order-2 flex w-full justify-center pt-2 sm:pt-4 lg:order-5 lg:w-auto lg:justify-start lg:pt-2"
-            >
+            <div className="order-2 flex w-full justify-center pt-2 sm:pt-4 lg:order-5 lg:w-auto lg:justify-start lg:pt-2">
               <DownloadCVButton />
-            </Reveal>
+            </div>
 
             {/* Description */}
             <Reveal

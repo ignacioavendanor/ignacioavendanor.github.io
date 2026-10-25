@@ -4,7 +4,8 @@ const PRELOADER_STORAGE_KEY = 'preloader-seen'
 
 export function usePreloader() {
   const [isPreloader, setPreloader] = useState(() => {
-    return sessionStorage.getItem(PRELOADER_STORAGE_KEY) !== 'true'
+    const shouldReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    return !shouldReduceMotion && sessionStorage.getItem(PRELOADER_STORAGE_KEY) !== 'true'
   })
 
   const seenPreloader = () => {
@@ -17,7 +18,7 @@ export function usePreloader() {
 
     const timeout = setTimeout(() => {
       seenPreloader()
-    }, 2000)
+    }, 1000)
 
     return () => clearTimeout(timeout)
   }, [isPreloader])

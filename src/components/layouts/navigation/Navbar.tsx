@@ -9,6 +9,7 @@ import { useScroll } from '@/hooks/useScroll'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/layouts/Container'
+import { Logo } from '@/components/ui/logo'
 
 export function Navbar() {
   const { isOpen, setMenuOpen, activeSection } = useNavigation()
@@ -25,13 +26,7 @@ export function Navbar() {
     >
       <Container className="flex items-center justify-between py-4">
         <a href="#" className="flex items-center">
-          <img
-            src={`/icons/logo-${usesLightForeground ? 'light' : 'dark'}.svg`}
-            alt="IA Logo"
-            loading="eager"
-            decoding="async"
-            className="h-8 w-auto"
-          />
+          <Logo className="h-8 w-auto" />
         </a>
 
         <div

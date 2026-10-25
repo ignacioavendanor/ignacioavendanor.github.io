@@ -19,7 +19,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="flex min-h-svh items-center overflow-x-clip py-16 sm:py-20"
+      className="flex min-h-svh items-center overflow-x-clip py-24 sm:py-28 lg:py-32"
     >
       <Container>
         <div className="mx-auto mb-8 max-w-4xl text-center sm:mb-10">

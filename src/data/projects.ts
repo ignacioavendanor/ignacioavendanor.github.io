@@ -1,5 +1,5 @@
-import portfolio from '@/assets/images/portfolio.webp'
-import sgp from '@/assets/images/sgp.webp'
+import portfolio from '@/assets/images/projects/portfolio.webp'
+import sgp from '@/assets/images/projects/sgp.webp'
 
 export interface ProjectItem {
   id: string

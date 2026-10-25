@@ -1,4 +1,3 @@
-import { motion } from 'motion/react'
 import { X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { navigationItems } from '@/config/navigation'
@@ -39,11 +38,9 @@ export function Sidebar() {
 
             return (
               <li key={item.id} className="relative flex items-center">
-                <motion.a
+                <a
                   href={`#${item.id}`}
                   onClick={closeMenu}
-                  whileHover={{ x: 8 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   className={cn(
                     'text-4xl sm:text-4xl lg:text-4xl font-black uppercase tracking-tight transition-colors w-fit block leading-none',
                     isActive
@@ -52,7 +49,7 @@ export function Sidebar() {
                   )}
                 >
                   {t(item.label)}
-                </motion.a>
+                </a>
               </li>
             )
           })}

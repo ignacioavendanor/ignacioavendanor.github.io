@@ -1,8 +1,8 @@
 import { Container } from '@/components/layouts/Container'
 import { Button } from '@/components/ui/button'
 import { Reveal } from '@/components/ui/reveal'
+import { ProfilePicture } from '@/components/ui/profile-picture'
 import { ArrowUpRight } from 'lucide-react'
-import profilePic from '@/assets/images/profile-picture.webp'
 import { Trans, useTranslation } from 'react-i18next'
 
 export function Hero() {
@@ -70,21 +70,9 @@ export function Hero() {
             </Reveal>
           </div>
 
-          <Reveal
-            delay={0.18}
-            y={32}
-            scale={0.94}
-            duration={0.65}
-            className="flex shrink-0 items-center justify-center self-center lg:self-end"
-          >
-            <img
-              src={profilePic}
-              alt="Ignacio Avendaño"
-              className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 xl:w-95 2xl:w-110 grayscale transition duration-300 ease-in-out hover:grayscale-0"
-              loading="eager"
-              decoding="async"
-            />
-          </Reveal>
+          <div className="flex shrink-0 items-center justify-center self-center lg:self-end">
+            <ProfilePicture className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 xl:w-95 grayscale transition duration-300 ease-in-out hover:grayscale-0" />
+          </div>
         </div>
       </Container>
     </section>
