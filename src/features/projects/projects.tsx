@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Container } from '@/components/layouts/Container'
 import { ProjectCard, type ProjectCardData } from './project-card'
-import { Reveal } from '@/components/ui/reveal'
+import { Reveal } from '@/components/shared/reveal'
 import { Separator } from '@/components/ui/separator'
 import { PROJECTS } from '@/data/projects'
 
@@ -14,6 +14,8 @@ export function Projects() {
     technologies: project.techsKey ? t(project.techsKey, { returnObjects: true }) : [],
     link: 'link' in project && typeof project.link === 'string' ? project.link : undefined,
     image: project.image,
+    imageWidth: project.imageWidth,
+    imageHeight: project.imageHeight,
   }))
 
   return (

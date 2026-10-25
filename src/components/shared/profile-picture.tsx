@@ -7,7 +7,11 @@ interface ProfilePictureProps extends ImgHTMLAttributes<HTMLImageElement> {
   className?: string
 }
 
-export function ProfilePicture({ className, fetchPriority = 'high', ...props }: ProfilePictureProps) {
+export function ProfilePicture({
+  className,
+  fetchPriority = 'high',
+  ...props
+}: ProfilePictureProps) {
   return (
     <img
       src={profilePic}

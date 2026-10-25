@@ -1,7 +1,7 @@
 import { Container } from '@/components/layouts/Container'
 import { Button } from '@/components/ui/button'
-import { Reveal } from '@/components/ui/reveal'
-import { ProfilePicture } from '@/components/ui/profile-picture'
+import { ProfilePicture } from '@/components/shared/profile-picture'
+import { Reveal } from '@/components/shared/reveal'
 import { ArrowUpRight } from 'lucide-react'
 import { Trans, useTranslation } from 'react-i18next'
 

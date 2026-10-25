@@ -9,7 +9,7 @@ import { useScroll } from '@/hooks/useScroll'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/layouts/Container'
-import { Logo } from '@/components/ui/logo'
+import { Logo } from '@/components/shared/logo'
 
 export function Navbar() {
   const { isOpen, setMenuOpen, activeSection } = useNavigation()

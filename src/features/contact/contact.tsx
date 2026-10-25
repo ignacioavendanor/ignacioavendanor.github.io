@@ -3,7 +3,7 @@ import { Container } from '@/components/layouts/Container'
 import { Separator } from '@/components/ui/separator'
 import { SOCIAL_LINKS } from '@/data/social-links'
 import { ArrowUpRight } from 'lucide-react'
-import { Reveal } from '@/components/ui/reveal'
+import { Reveal } from '@/components/shared/reveal'
 
 export function Contact() {
   const { t } = useTranslation()

@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ScrollSlide } from '@/components/ui/scroll-slide'
+import { ScrollSlide } from '@/components/shared/scroll-slide'
 import { cn } from '@/lib/utils'
 import { useReducedMotion, useInView } from 'motion/react'
 import { useRef } from 'react'
@@ -13,6 +13,8 @@ export interface ProjectCardData {
   technologies: readonly string[]
   link?: string
   image: string
+  imageWidth: number
+  imageHeight: number
 }
 
 interface ProjectCardProps {
@@ -63,6 +65,8 @@ function ProjectCardItem({ project, index, viewProjectLabel }: ProjectCardItemPr
         <img
           src={project.image}
           alt={project.title}
+          width={project.imageWidth}
+          height={project.imageHeight}
           loading="lazy"
           decoding="async"
           className={cn(

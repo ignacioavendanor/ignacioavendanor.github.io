@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Badge } from '@/components/ui/badge'
-import { ScrollSlide } from '@/components/ui/scroll-slide'
+import { ScrollSlide } from '@/components/shared/scroll-slide'
 import { ExperienceTimeline } from '@/features/experience/experience-timeline'
 import { cn } from '@/lib/utils'
 
@@ -77,6 +77,8 @@ export function TimelineItem({
             <img
               src={item.logo}
               alt={`${item.company} logo`}
+              width={64}
+              height={64}
               loading="lazy"
               decoding="async"
               className="max-h-14 max-w-14 object-contain md:max-h-16 md:max-w-16"
