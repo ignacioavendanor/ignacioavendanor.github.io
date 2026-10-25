@@ -14,8 +14,6 @@ export function Projects() {
     technologies: project.techsKey ? t(project.techsKey, { returnObjects: true }) : [],
     link: 'link' in project && typeof project.link === 'string' ? project.link : undefined,
     image: project.image,
-    imageWidth: project.imageWidth,
-    imageHeight: project.imageHeight,
   }))
 
   return (

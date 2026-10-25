@@ -13,8 +13,6 @@ export interface ProjectCardData {
   technologies: readonly string[]
   link?: string
   image: string
-  imageWidth: number
-  imageHeight: number
 }
 
 interface ProjectCardProps {
@@ -65,8 +63,6 @@ function ProjectCardItem({ project, index, viewProjectLabel }: ProjectCardItemPr
         <img
           src={project.image}
           alt={project.title}
-          width={project.imageWidth}
-          height={project.imageHeight}
           loading="lazy"
           decoding="async"
           className={cn(
