@@ -1,11 +1,7 @@
 import type { ImgHTMLAttributes } from 'react'
 
-import type { ImgHTMLAttributes } from 'react'
-
 import profilePic384 from '@/assets/images/profile/profile-picture-384.webp'
 import profilePic from '@/assets/images/profile/profile-picture.webp'
-
-interface ProfilePictureProps extends ImgHTMLAttributes<HTMLImageElement> {
 interface ProfilePictureProps extends ImgHTMLAttributes<HTMLImageElement> {
   className?: string
 }
@@ -26,8 +22,6 @@ export function ProfilePicture({
       height={1185}
       loading="eager"
       decoding="async"
-      fetchPriority={fetchPriority}
-      {...props}
       fetchPriority={fetchPriority}
       {...props}
     />
