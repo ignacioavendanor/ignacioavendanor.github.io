@@ -4,7 +4,7 @@ import { AboutImage } from './about-image'
 import { AboutTechnologies } from './about-technologies'
 import { Separator } from '@/components/ui/separator'
 import { DownloadCVButton } from '../hero'
-import { Reveal } from '@/components/ui/reveal'
+import { Reveal } from '@/components/shared/reveal'
 
 export function About() {
   const { t } = useTranslation()

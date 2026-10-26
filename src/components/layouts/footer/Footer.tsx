@@ -3,7 +3,7 @@ import { navigationItems } from '@/config/navigation'
 import { Separator } from '@/components/ui/separator'
 import { useTranslation } from 'react-i18next'
 import { SOCIAL_LINKS } from '@/data/social-links'
-import { Logo } from '@/components/ui/logo'
+import { Logo } from '@/components/shared/logo'
 
 export function Footer() {
   const { t } = useTranslation()

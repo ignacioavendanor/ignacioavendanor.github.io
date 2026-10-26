@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ScrollSlide } from '@/components/ui/scroll-slide'
+import { ScrollSlide } from '@/components/shared/scroll-slide'
 import { cn } from '@/lib/utils'
 import { useReducedMotion, useInView } from 'motion/react'
 import { useRef } from 'react'

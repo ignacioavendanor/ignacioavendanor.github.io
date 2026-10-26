@@ -16,7 +16,7 @@ export function useTimelineProgress() {
 
   const { scrollYProgress } = useScroll({
     target: trackRef,
-    offset: ['start 50%', 'end 55%'],
+    offset: ['start 50%', 'end 50%'],
   })
 
   const targetProgress = useMotionValue(0)

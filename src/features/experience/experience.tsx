@@ -1,9 +1,9 @@
 import { Trans, useTranslation } from 'react-i18next'
 import { EXPERIENCES } from '@/data/experience'
-import { Timeline } from '@/components/ui/timeline'
 import { Container } from '@/components/layouts/Container'
 import { Separator } from '@/components/ui/separator'
-import type { TimelineEntry } from '@/components/ui/timeline-item'
+import { Timeline } from './timeline'
+import type { TimelineEntry } from './timeline-item'
 
 export function Experience() {
   const { t } = useTranslation()
