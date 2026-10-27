@@ -55,17 +55,13 @@ export function Hero() {
               duration={0.45}
               className="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
             >
-              <Button size="xl">
-                <a href="#projects" className="flex items-center">
-                  {t('hero.cta')}
-                  <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 stroke-2 sm:ml-2 sm:h-4 sm:w-4" />
-                </a>
+              <Button render={<a href="#projects" />} size="xl">
+                {t('hero.cta')}
+                <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 stroke-2 sm:ml-2 sm:h-4 sm:w-4" />
               </Button>
 
-              <Button size="xl" variant="outline">
-                <a href="#contact" className="flex items-center">
-                  {t('hero.secondarycta')}
-                </a>
+              <Button render={<a href="#contact" />} size="xl" variant="outline">
+                {t('hero.secondarycta')}
               </Button>
             </Reveal>
           </div>
