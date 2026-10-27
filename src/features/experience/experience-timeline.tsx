@@ -12,7 +12,7 @@ export function ExperienceTimeline({ role, description }: ExperienceTimelineProp
         {role}
       </h4>
 
-      <p className="mt-2 text-sm leading-relaxed text-pretty text-muted-foreground sm:text-base">
+      <p className="mt-2 text-sm leading-relaxed text-pretty text-muted-dark sm:text-base">
         {description}
       </p>
     </div>

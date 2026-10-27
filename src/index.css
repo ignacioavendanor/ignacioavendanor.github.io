@@ -16,6 +16,7 @@
   --color-ring: var(--ring);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
+  --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-muted-dark: var(--muted-dark);
   --color-muted-accent: var(--muted-accent);
@@ -57,6 +58,7 @@
   --muted-accent: oklch(93.5% 0.03 258);
 
   /* Accent */
+  --accent: oklch(52% 0.19 245);
   --accent-foreground: oklch(32% 0.11 258);
 
   /* Semantic */

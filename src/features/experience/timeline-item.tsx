@@ -45,7 +45,7 @@ export function TimelineItem({
               : 'md:col-start-3 md:pl-10 md:text-left',
           )}
         >
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-primary">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-accent">
             {item.period}
           </p>
           <h3 className="text-2xl font-black tracking-tight text-primary-foreground sm:text-3xl">
