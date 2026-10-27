@@ -16,7 +16,7 @@ export function LanguageToggle() {
       onClick={toggleLanguage}
       variant="control"
       size={'lg'}
-      className="cursor-pointer uppercase text-inherit transition-colors"
+      className="min-w-10 cursor-pointer border-transparent bg-transparent px-2 uppercase text-foreground transition-[color,opacity] duration-200 hover:opacity-70 active:opacity-50"
     >
       {currentLanguage === 'es' ? 'ES' : 'EN'}
     </Button>
