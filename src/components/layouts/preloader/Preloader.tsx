@@ -39,7 +39,7 @@ export function Preloader() {
         className="text-center text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase leading-none select-none"
         style={{
           color: 'var(--background)',
-          WebkitTextStroke: '8px var(--primary)',
+          WebkitTextStroke: '6px var(--primary)',
           paintOrder: 'stroke fill',
         }}
       >
