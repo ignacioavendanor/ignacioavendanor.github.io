@@ -67,6 +67,10 @@
   --ring: oklch(52% 0.19 245);
 
   --radius: 0rem;
+
+  /* Text outlines */
+  --text-outline-width: 1px;
+  --text-outline-color: white;
 }
 
 @layer base {

@@ -19,7 +19,7 @@ export function Navbar() {
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-50 bg-transparent transition-[background-color,backdrop-filter] duration-300',
-        isScrolled && 'bg-background/5 backdrop-blur-sm',
+        isScrolled && 'bg-foreground/5 backdrop-blur-lg',
       )}
     >
       <Container className="flex items-center justify-between py-4">
@@ -38,7 +38,14 @@ export function Navbar() {
               className="border-transparent bg-transparent px-2 text-foreground transition-[color,opacity] duration-200 hover:opacity-70 active:opacity-50"
               aria-label={t('menu.title')}
             >
-              <span className="mr-1 hidden md:inline-block">{t('menu.title')}</span>
+              <span
+                className={cn(
+                  'mr-1 hidden md:inline-block',
+                  isScrolled && '[-webkit-text-stroke:var(--text-outline-width)_var(--text-outline-color)] [paint-order:stroke_fill]',
+                )}
+              >
+                {t('menu.title')}
+              </span>
               <Menu className="size-5 shrink-0" strokeWidth={2} />
             </Button>
 
