@@ -46,7 +46,21 @@ export function Navbar() {
               >
                 {t('menu.title')}
               </span>
-              <Menu className="size-5 shrink-0" strokeWidth={2} />
+              <span className="relative size-5 shrink-0">
+                {isScrolled && (
+                  <Menu
+                    aria-hidden
+                    className="absolute inset-0 size-5"
+                    strokeWidth={4.5}
+                    style={{ stroke: 'var(--text-outline-color)' }}
+                  />
+                )}
+                <Menu
+                  className="absolute inset-0 size-5"
+                  strokeWidth={2}
+                  style={{ stroke: 'var(--foreground)' }}
+                />
+              </span>
             </Button>
 
             <SheetContent
