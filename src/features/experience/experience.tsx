@@ -19,7 +19,7 @@ export function Experience() {
       <Trans
         i18nKey={exp.descriptionKey}
         components={{
-          highlight: <span className="font-semibold text-primary" />,
+          highlight: <span className="font-semibold text-accent" />,
         }}
       />
     ),

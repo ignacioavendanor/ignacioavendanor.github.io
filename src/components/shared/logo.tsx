@@ -9,7 +9,7 @@ export function Logo({ className }: LogoProps) {
     <img
       src={logo}
       alt="IA Logo"
-      width={59}
+      width={48}
       height={43}
       className={className}
       loading="eager"

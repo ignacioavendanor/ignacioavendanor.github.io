@@ -1,27 +1,25 @@
 import { Menu } from 'lucide-react'
 import { Sheet, SheetContent } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
 import { Sidebar } from './Sidebar'
 import LanguageToggle from '../LanguageToggle'
 import { useNavigation } from '@/hooks/useNavigation'
-import { useScroll } from '@/hooks/useScroll'
 import { useTranslation } from 'react-i18next'
-import { cn } from '@/lib/utils'
 import { Container } from '@/components/layouts/Container'
 import { Logo } from '@/components/shared/logo'
+import { useScroll } from '@/hooks/useScroll'
+import { cn } from '@/lib/utils'
 
 export function Navbar() {
-  const { isOpen, setMenuOpen, activeSection } = useNavigation()
-  const isScrolled = useScroll(20)
+  const { isOpen, setMenuOpen } = useNavigation()
   const { t } = useTranslation()
-  const usesLightForeground = ['about', 'experience', 'contact'].includes(activeSection)
+  const isScrolled = useScroll(20)
 
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-all duration-300',
-        isScrolled ? 'backdrop-blur-md shadow-sm' : 'bg-transparent',
+        'fixed inset-x-0 top-0 z-50 bg-transparent transition-[background-color,backdrop-filter] duration-300',
+        isScrolled && 'bg-foreground/5 backdrop-blur-lg',
       )}
     >
       <Container className="flex items-center justify-between py-4">
@@ -29,32 +27,40 @@ export function Navbar() {
           <Logo className="h-8 w-auto" />
         </a>
 
-        <div
-          className={cn(
-            'flex items-center gap-2 sm:gap-3',
-            activeSection === 'home' || !activeSection
-              ? 'text-primary lg:text-primary-foreground'
-              : usesLightForeground
-                ? 'text-primary-foreground'
-                : 'text-primary',
-          )}
-        >
+        <div className="flex items-center gap-1">
           <LanguageToggle />
-
-          <div className="flex items-center self-stretch py-2">
-            <Separator orientation="vertical" className="bg-current/30" />
-          </div>
 
           <Sheet open={isOpen} onOpenChange={setMenuOpen}>
             <Button
               variant="control"
-              size="sm"
+              size="lg"
               onClick={() => setMenuOpen(true)}
-              className="text-sm text-inherit"
+              className="border-transparent bg-transparent px-2 text-foreground transition-[color,opacity] duration-200 hover:opacity-70 active:opacity-50"
               aria-label={t('menu.title')}
             >
-              <span className="hidden md:inline-block mr-2">{t('menu.title')}</span>
-              <Menu className="size-5 shrink-0" strokeWidth={2} />
+              <span
+                className={cn(
+                  'mr-1 hidden md:inline-block',
+                  isScrolled && '[-webkit-text-stroke:var(--text-outline-width)_var(--text-outline-color)] [paint-order:stroke_fill]',
+                )}
+              >
+                {t('menu.title')}
+              </span>
+              <span className="relative size-5 shrink-0">
+                {isScrolled && (
+                  <Menu
+                    aria-hidden
+                    className="absolute inset-0 size-5"
+                    strokeWidth={4.5}
+                    style={{ stroke: 'var(--text-outline-color)' }}
+                  />
+                )}
+                <Menu
+                  className="absolute inset-0 size-5"
+                  strokeWidth={2}
+                  style={{ stroke: 'var(--foreground)' }}
+                />
+              </span>
             </Button>
 
             <SheetContent

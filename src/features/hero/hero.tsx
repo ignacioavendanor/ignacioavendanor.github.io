@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-svh items-center justify-center overflow-x-clip bg-background py-10 lg:h-svh lg:py-0"
+      className="relative flex min-h-svh items-center justify-center overflow-hidden bg-background py-10 lg:h-svh lg:pb-0 lg:pt-12"
     >
       <div
         aria-hidden="true"
@@ -19,10 +19,10 @@ export function Hero() {
       />
 
       <Container className="h-full">
-        <div className="relative z-20 flex h-full flex-col-reverse items-center justify-center gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-8 xl:gap-12">
+        <div className="relative z-20 flex h-full flex-col-reverse items-center justify-center gap-6 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-8 xl:gap-12">
           <div className="flex w-full min-w-0 flex-col items-center justify-center text-center lg:flex-1 lg:items-start lg:self-center lg:text-left">
             <Reveal y={28} scale={0.96} delay={0.05} duration={0.55} className="w-full">
-              <h1 className="w-full text-3xl font-extrabold uppercase tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+              <h1 className="w-full text-3xl font-extrabold uppercase tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
                 <span className="mb-4 block text-xs font-bold uppercase leading-normal tracking-wider text-primary sm:mb-5 sm:text-base lg:text-lg xl:text-xl">
                   {t('hero.role')}
                 </span>
@@ -55,23 +55,24 @@ export function Hero() {
               duration={0.45}
               className="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
             >
-              <Button size="xl">
-                <a href="#projects" className="flex items-center">
-                  {t('hero.cta')}
-                  <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 stroke-2 sm:ml-2 sm:h-4 sm:w-4" />
-                </a>
+              <Button render={<a href="#projects" />} nativeButton={false} size="xl">
+                {t('hero.cta')}
+                <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 stroke-2 sm:ml-2 sm:h-4 sm:w-4" />
               </Button>
 
-              <Button size="xl" variant="outline">
-                <a href="#contact" className="flex items-center">
-                  {t('hero.secondarycta')}
-                </a>
+              <Button
+                render={<a href="#contact" />}
+                nativeButton={false}
+                size="xl"
+                variant="outline"
+              >
+                {t('hero.secondarycta')}
               </Button>
             </Reveal>
           </div>
 
-          <div className="flex shrink-0 items-center justify-center self-center lg:self-end">
-            <ProfilePicture className="h-auto w-48 object-contain object-bottom xs:w-56 sm:w-64 md:w-80 xl:w-95 grayscale transition duration-300 ease-in-out hover:grayscale-0" />
+          <div className="w-64 shrink-0 self-center xs:w-72 sm:w-82 md:w-85 lg:absolute lg:bottom-0 lg:right-0 lg:w-90 xl:w-md">
+            <ProfilePicture className="block h-auto w-full object-contain object-bottom grayscale transition duration-300 ease-in-out hover:grayscale-0" />
           </div>
         </div>
       </Container>

@@ -19,7 +19,7 @@ const es = {
     about: {
       title: 'Acerca de mí',
       description:
-        'Ingeniero de Software enfocado en <highlight>arquitectura e integración de plataformas</highlight>. A través del diseño y el desarrollo de software, implemento soluciones tecnológicas y orquesto <highlight>infraestructura</highlight> para asegurar la escalabilidad y <highlight>continuidad operacional.</highlight>',
+        'Ingeniero de Software Full-Stack especializado en <highlight>arquitectura e infraestructura de software</highlight>. Construyo soluciones desde su definición hasta su evolución <highlight>conectando tecnología y negocio</highlight> para convertir necesidades del negocio en <highlight>soluciones que marcan la diferencia</highlight>.',
       technologies: 'Tecnologías',
       education: {
         title: 'Educación',
@@ -66,8 +66,8 @@ const es = {
         period: 'Mayo 2026 - Presente',
         location: 'Antofagasta, Chile',
         description:
-          'Diseño, desarrollo e integro <highlight>soluciones tecnológicas</highlight> en .NET Core, Next.js, Azure y Power Platform para representar <highlight>procesos corporativos</highlight> y garantizar la <highlight>continuidad operacional</highlight>.',
-        techs: ['.NET Core', 'Next.js', 'Azure', 'Power Platform', 'SQL Server'],
+          'Lidero la creación de un sistema de gestión de proyectos e integro soluciones tecnológicas con <highlight>.NET Core</highlight>, <highlight>Next.js</highlight> y <highlight>Azure</highlight> para optimizar <highlight>procesos corporativos</highlight> y garantizar la <highlight>continuidad operacional</highlight>.',
+        techs: ['.NET Core', 'Next.js', 'Azure', 'SQL Server'],
       },
       nortrans: {
         company: 'Nortrans',
@@ -75,32 +75,32 @@ const es = {
         period: 'Enero 2026 - Abril 2026',
         location: 'Antofagasta, Chile',
         description:
-          'Implementé una <highlight>plataforma corporativa</highlight> en .NET Core y Next.js para unificar la operación transversal de la compañía en una única <highlight>plataforma centralizada</highlight>.',
+          'Implementé una <highlight>plataforma corporativa</highlight> en Next.js, .NET Core y PostgreSQL para unificar la operación transversal de la compañía en una única <highlight>plataforma centralizada</highlight>.',
         techs: ['.NET Core', 'Next.js', 'PostgreSQL'],
       },
       metric: {
         company: 'Metric Studio',
-        role: 'Capstone Project - Ingeniero de Software',
+        role: 'Capstone Project (Ingeniero de Software)',
         period: 'Agosto 2025 - Diciembre 2025',
         location: 'Antofagasta, Chile',
         description:
-          'Desarrollé una <highlight>intranet corporativa</highlight> con Next.js, Supabase para gestionar los procesos de <highlight>reclutamiento y gestión del personal</highlight> de SmartPOS, eliminando la dispersión de información y tareas manuales.',
+          'Desarrollé una intranet con Next.js, Supabase y PostgreSQL para centralizar los procesos de <highlight>gestión de talento</highlight> y <highlight>reducir procesos manuales</highlight>.',
         techs: ['Next.js', 'Supabase', 'PostgreSQL'],
       },
       bhp: {
         company: 'BHP Group Limited',
-        role: 'Práctica Profesional (Data & Digital) - Ingeniero de Datos',
+        role: 'Práctica Profesional (Ingeniero de Datos)',
         period: 'Enero 2025 - Marzo 2025',
         location: 'Santiago de Chile, Chile',
         description:
-          'Diseñé un <highlight>dashboard de centralización</highlight> de proyectos tecnológicos en Power BI para el área de <highlight>Data & Digital</highlight> con el fin de reducir redundancias operativas y maximizar la visibilidad del <highlight>impacto operativo y financiero</highlight>.',
+          'Diseñé un dashboard en Power BI para centralizar los proyectos tecnológicos de <highlight>Data & Digital</highlight>, mejorando la visibilidad <highlight> operativa y financiera</highlight>.',
         techs: ['Power BI', 'SQL', 'Excel', 'Star Schema', 'Data Modeling'],
       },
     },
     contact: {
       title: 'Contacto',
       reference: 'La arquitectura es lo que resulta difícil de cambiar después.',
-      author: '— Martin Fowler (Patterns of Enterprise Application Architecture)',
+      author: ' Martin Fowler (Patterns of Enterprise Application Architecture).',
       socials: 'Redes sociales',
       email: 'Correo electrónico',
       linkedin: 'LinkedIn',

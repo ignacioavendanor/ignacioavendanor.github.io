@@ -19,11 +19,11 @@ const en = {
     about: {
       title: 'About Me',
       description:
-        'Software Engineer focused on <highlight>platform architecture and systems integration</highlight>. Through software design and development, I deliver technical solutions and orchestrate <highlight>infrastructure</highlight> to ensure <highlight>operational continuity</highlight> and business scalability.',
+        'Full-Stack Software Engineer specialized in <highlight>software architecture and infrastructure</highlight>. I build solutions from definition through evolution, <highlight>connecting technology and business</highlight> to turn business needs into <highlight>solutions that make a difference</highlight>.',
       technologies: 'Stack',
       education: {
         title: 'Education',
-        degree: 'B.S. in Computer Science & Informatics Engineering',
+        degree: 'B.S. in Computer Science and Informatics',
         institution: 'Universidad Católica del Norte',
       },
       languages: {
@@ -66,8 +66,8 @@ const en = {
         period: 'May 2026 - Present',
         location: 'Antofagasta, Chile',
         description:
-          'Design, develop, and integrate <highlight>technological solutions</highlight> across .NET Core, Next.js, Azure, and Power Platform to represent <highlight>corporate processes</highlight> and ensure <highlight>operational continuity</highlight>.',
-        techs: ['.NET Core', 'Next.js', 'Azure', 'Power Platform', 'SQL Server'],
+          'I lead the creation of a project management system and integrate tech solutions using <highlight>.NET Core</highlight>, <highlight>Next.js</highlight>, and <highlight>Azure</highlight> to optimize <highlight>corporate processes</highlight> and ensure <highlight>operational continuity</highlight>.',
+        techs: ['.NET Core', 'Next.js', 'Azure', 'SQL Server'],
       },
       nortrans: {
         company: 'Nortrans',
@@ -75,7 +75,7 @@ const en = {
         period: 'January 2026 - April 2026',
         location: 'Antofagasta, Chile',
         description:
-          'Implemented a <highlight>corporate platform</highlight> using .NET Core and Next.js to unify cross-functional company operations into a single <highlight>centralized ecosystem</highlight>.',
+          'Implemented a <highlight>corporate platform</highlight> using Next.js, .NET Core and PostgreSQL to unify cross-functional company operations into a single <highlight>centralized ecosystem</highlight>.',
         techs: ['.NET Core', 'Next.js', 'PostgreSQL'],
       },
       metric: {
@@ -84,7 +84,7 @@ const en = {
         period: 'August 2025 - December 2025',
         location: 'Antofagasta, Chile',
         description:
-          'Developed a <highlight>corporate intranet</highlight> with Next.js and Supabase to streamline <highlight>recruitment and personnel management workflows</highlight> for SmartPOS, eliminating information silos and manual tasks.',
+          'Developed an intranet with Next.js, Supabase and PostgreSQL to <highlight>centralize HR operations</highlight>.',
         techs: ['Next.js', 'Supabase', 'PostgreSQL'],
       },
       bhp: {
@@ -100,7 +100,7 @@ const en = {
     contact: {
       title: 'Contact',
       reference: 'Architecture is about the things that are hard to change later.',
-      author: '— Martin Fowler (Patterns of Enterprise Application Architecture)',
+      author: ' Martin Fowler (Patterns of Enterprise Application Architecture).',
       socials: 'Socials',
       email: 'Email',
       linkedin: 'LinkedIn',
