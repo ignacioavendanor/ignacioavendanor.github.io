@@ -19,7 +19,7 @@ const SEO_COPY: Record<
   es: {
     title: 'Ignacio Avendaño | Ingeniero de Software Full-Stack',
     description:
-      'Ingeniero de Software Full-Stack en Antofagasta, Chile, con experiencia en arquitectura de software, integración de sistemas y soluciones escalables con .NET, Next.js y Azure.',
+      'Conecto tecnología, procesos y negocio mediante soluciones a medida, transformando problemas operativos en resultados prácticos y de alto impacto.',
     jobTitle: 'Ingeniero de Software',
     locale: 'es_CL',
     areasOfExpertise: [
@@ -33,7 +33,7 @@ const SEO_COPY: Record<
   en: {
     title: 'Ignacio Avendaño | Full-Stack Software Engineer',
     description:
-      'Full-stack software engineer in Antofagasta, Chile, with experience in software architecture, systems integration, and scalable solutions using .NET, Next.js, and Azure.',
+      'I bridge technology, processes, and business with tailored solutions, turning complex operational bottlenecks into practical, high-impact outcomes.',
     jobTitle: 'Software Engineer',
     locale: 'en_US',
     areasOfExpertise: [

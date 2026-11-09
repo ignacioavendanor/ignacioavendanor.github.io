@@ -16,7 +16,10 @@ export function Footer() {
           <a href="#" className="transition-opacity hover:opacity-80" aria-label="Inicio">
             <Logo className="h-7 w-auto sm:h-8" />
           </a>
-          <Separator orientation="vertical" className="hidden bg-muted-dark/40 sm:block" />
+          <Separator
+            orientation="vertical"
+            className="hidden bg-muted-dark/40 data-vertical:self-stretch sm:block"
+          />
           <p className="text-xs text-muted-dark">{t('menu.copyright')}</p>
         </div>
 
@@ -34,7 +37,10 @@ export function Footer() {
             </ul>
           </nav>
 
-          <Separator orientation="vertical" className="hidden bg-muted-dark/40 sm:block" />
+          <Separator
+            orientation="vertical"
+            className="hidden bg-muted-dark/40 data-vertical:self-stretch sm:block"
+          />
 
           {/* Socials */}
           <div className="flex items-center justify-center gap-4">

@@ -9,6 +9,7 @@ import { Container } from '@/components/layouts/Container'
 import { Logo } from '@/components/shared/logo'
 import { useScroll } from '@/hooks/useScroll'
 import { cn } from '@/lib/utils'
+import { Separator } from '@/components/ui/separator'
 
 export function Navbar() {
   const { isOpen, setMenuOpen } = useNavigation()
@@ -29,6 +30,10 @@ export function Navbar() {
 
         <div className="flex items-center gap-1">
           <LanguageToggle />
+          <Separator
+            orientation="vertical"
+            className="mx-1 h-5 rounded-full bg-muted-foreground/50"
+          />
 
           <Sheet open={isOpen} onOpenChange={setMenuOpen}>
             <Button
@@ -41,7 +46,8 @@ export function Navbar() {
               <span
                 className={cn(
                   'mr-1 hidden md:inline-block',
-                  isScrolled && '[-webkit-text-stroke:var(--text-outline-width)_var(--text-outline-color)] [paint-order:stroke_fill]',
+                  isScrolled &&
+                    '[-webkit-text-stroke:var(--text-outline-width)_var(--text-outline-color)] [paint-order:stroke_fill]',
                 )}
               >
                 {t('menu.title')}

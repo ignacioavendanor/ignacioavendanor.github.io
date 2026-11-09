@@ -25,9 +25,9 @@ export function Contact() {
             </span>
 
             <Reveal y={10} duration={0.4} className="relative z-10">
-              <h1 className="text-6xl font-black tracking-tight uppercase leading-none text-primary-foreground sm:text-7xl md:text-8xl">
+              <h2 className="text-6xl font-black tracking-tight uppercase leading-none text-primary-foreground sm:text-7xl md:text-8xl">
                 {t('contact.title')}
-              </h1>
+              </h2>
             </Reveal>
 
             <Reveal delay={0.1} y={6} duration={0.35} className="relative z-10">
