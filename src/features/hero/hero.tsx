@@ -4,6 +4,7 @@ import { ProfilePicture } from '@/components/shared/profile-picture'
 import { Reveal } from '@/components/shared/reveal'
 import { ArrowUpRight } from 'lucide-react'
 import { Trans, useTranslation } from 'react-i18next'
+import { DownloadCVButton } from './download-cv'
 
 export function Hero() {
   const { t } = useTranslation()
@@ -55,18 +56,16 @@ export function Hero() {
               duration={0.45}
               className="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
             >
-              <Button render={<a href="#projects" />} nativeButton={false} size="xl">
-                {t('hero.cta')}
-                <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 stroke-2 sm:ml-2 sm:h-4 sm:w-4" />
-              </Button>
+              <DownloadCVButton variant="default" />
 
               <Button
-                render={<a href="#contact" />}
+                render={<a href="#projects" />}
                 nativeButton={false}
                 size="xl"
                 variant="outline"
               >
                 {t('hero.secondarycta')}
+                <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 stroke-2 sm:ml-2 sm:h-4 sm:w-4" />
               </Button>
             </Reveal>
           </div>

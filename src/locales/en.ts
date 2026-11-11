@@ -10,8 +10,7 @@ const en = {
       role: 'Software Engineer',
       description:
         'I bridge <highlight>technology, processes, and business</highlight> with tailored solutions, turning complex operational bottlenecks into <highlight>practical, high-impact outcomes</highlight>.',
-      cta: 'View projects',
-      secondarycta: 'Get in touch',
+      secondarycta: 'View projects',
       cv: 'Download CV',
       cvUnavailable: 'CV unavailable',
       download: 'Downloading...',
@@ -19,7 +18,7 @@ const en = {
     about: {
       title: 'About Me',
       description:
-        'Full-Stack Software Engineer specialized in <highlight>software architecture and infrastructure</highlight>. I build solutions from definition through evolution, <highlight>connecting technology and business</highlight> to turn business needs into <highlight>solutions that make a difference</highlight>.',
+        'Full-Stack Software Engineer specialized in <highlight>software architecture and infrastructure</highlight>. I build solutions from definition through their evolution, <highlight>connecting technology and business</highlight> to turn needs into <highlight>outcomes that make a difference</highlight>.',
       technologies: 'Stack',
       education: {
         title: 'Education',

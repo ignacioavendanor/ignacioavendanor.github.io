@@ -6,7 +6,11 @@ import { downloadCv } from '@/lib/api/cv'
 import { downloadBlob } from '@/lib/download'
 import { isCvDownloadConfigured } from '@/lib/env'
 
-export function DownloadCVButton() {
+export function DownloadCVButton({
+  variant = 'secondary',
+}: {
+  variant?: 'default' | 'secondary' | 'outline'
+}) {
   const { t } = useTranslation()
   const [isDownloading, setIsDownloading] = useState(false)
 
@@ -26,7 +30,7 @@ export function DownloadCVButton() {
     <Button
       type="button"
       size="xl"
-      variant="secondary"
+      variant={variant}
       onClick={handleDownload}
       disabled={isDownloading || !isCvDownloadConfigured}
       title={!isCvDownloadConfigured ? t('hero.cvUnavailable') : undefined}
