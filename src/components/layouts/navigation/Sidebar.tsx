@@ -1,6 +1,6 @@
 import { X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { navigationItems } from '@/config/navigation'
+import { navigationLinks } from '@/config/navigation'
 import { useNavigation } from '@/hooks/useNavigation'
 import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
@@ -33,7 +33,7 @@ export function Sidebar() {
         className="flex min-h-0 flex-1 flex-col justify-between overflow-y-auto px-6 py-3 sm:px-10 sm:py-4 lg:px-14"
       >
         <ul className="m-0 flex flex-1 flex-col justify-evenly p-0 list-none">
-          {navigationItems.map((item) => {
+          {navigationLinks.map((item) => {
             const isActive = activeSection === item.id
 
             return (

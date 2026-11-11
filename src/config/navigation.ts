@@ -20,3 +20,5 @@ export const navigationItems = [
     label: 'contact.title',
   },
 ] as const
+
+export const navigationLinks = navigationItems.filter((item) => item.id !== 'home')

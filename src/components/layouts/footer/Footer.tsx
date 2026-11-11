@@ -1,5 +1,5 @@
 import { Container } from '../Container'
-import { navigationItems } from '@/config/navigation'
+import { navigationLinks } from '@/config/navigation'
 import { Separator } from '@/components/ui/separator'
 import { useTranslation } from 'react-i18next'
 import { SOCIAL_LINKS } from '@/data/social-links'
@@ -27,7 +27,7 @@ export function Footer() {
         <div className="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row sm:gap-6">
           <nav aria-label="Navegación pie de página">
             <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center text-xs font-semibold text-muted-dark capitalize">
-              {navigationItems.map((item) => (
+              {navigationLinks.map((item) => (
                 <li key={item.label}>
                   <a href={`#${item.id}`} className="transition-colors hover:text-primary">
                     {t(item.label)}
