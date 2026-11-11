@@ -15,12 +15,23 @@ export function useScrollSpy(sectionIds: string[]) {
       { rootMargin: '-45% 0px -45% 0px' },
     )
 
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
+    const observeSections = () => {
+      observer.disconnect()
+      sectionIds.forEach((id) => {
+        const element = document.getElementById(id)
+        if (element) observer.observe(element)
+      })
+    }
 
-    return () => observer.disconnect()
+    observeSections()
+
+    const mutationObserver = new MutationObserver(observeSections)
+    mutationObserver.observe(document.body, { childList: true, subtree: true })
+
+    return () => {
+      mutationObserver.disconnect()
+      observer.disconnect()
+    }
   }, [sectionIds])
 
   return activeId

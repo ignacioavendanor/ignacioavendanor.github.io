@@ -1,3 +1,5 @@
+import { lazy, Suspense } from 'react'
+import { SectionsSkeleton } from './components/layouts/SectionsSkeleton'
 import { Preloader } from './components/layouts/preloader/Preloader'
 import { Navbar } from './components/layouts/navigation/Navbar'
 import { Footer } from './components/layouts/footer/Footer'
@@ -9,10 +11,13 @@ import { useScrollSpy } from './hooks/useScrollSpy'
 
 // Features
 import { Hero } from './features/hero'
-import { About } from './features/about'
-import { Experience } from './features/experience'
-import { Projects } from './features/projects'
-import { Contact } from './features/contact'
+
+const About = lazy(() => import('./features/about').then((m) => ({ default: m.About })))
+const Experience = lazy(() =>
+  import('./features/experience').then((m) => ({ default: m.Experience })),
+)
+const Projects = lazy(() => import('./features/projects').then((m) => ({ default: m.Projects })))
+const Contact = lazy(() => import('./features/contact').then((m) => ({ default: m.Contact })))
 
 const sectionIds = navigationItems.map((item) => item.id)
 
@@ -35,10 +40,12 @@ function App() {
 
         <main className="flex-1">
           <Hero />
-          <About />
-          <Experience />
-          <Projects />
-          <Contact />
+          <Suspense fallback={<SectionsSkeleton />}>
+            <About />
+            <Experience />
+            <Projects />
+            <Contact />
+          </Suspense>
         </main>
 
         <Footer />
