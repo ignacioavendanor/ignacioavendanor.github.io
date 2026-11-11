@@ -17,9 +17,7 @@ export function Sidebar() {
       {/* Header */}
       <div className="flex items-center justify-center px-6 sm:px-10 py-2.5 shrink-0">
         <Button variant="control" onClick={closeMenu} className="group gap-2 px-3 py-1 h-auto">
-          <span className="text-sm sm:text-base font-medium tracking-wider">
-            {t('menu.close')}
-          </span>
+          <span className="text-sm sm:text-base font-medium tracking-wider">{t('menu.close')}</span>
           <X
             className="size-5 sm:size-6 transition-transform duration-200 group-hover:rotate-90"
             strokeWidth={2}
@@ -32,9 +30,9 @@ export function Sidebar() {
       {/* Nav items */}
       <nav
         aria-label={t('menu.title')}
-        className="flex min-h-0 flex-1 flex-col justify-between overflow-hidden px-6 py-3 sm:px-10 sm:py-4 lg:px-14"
+        className="flex min-h-0 flex-1 flex-col justify-between overflow-y-auto px-6 py-3 sm:px-10 sm:py-4 lg:px-14"
       >
-        <ul className="m-0 flex flex-col gap-5 p-0 list-none sm:gap-6 lg:gap-4 xl:gap-6">
+        <ul className="m-0 flex flex-1 flex-col justify-evenly p-0 list-none">
           {navigationItems.map((item) => {
             const isActive = activeSection === item.id
 
@@ -44,7 +42,7 @@ export function Sidebar() {
                   href={`#${item.id}`}
                   onClick={closeMenu}
                   className={cn(
-                    'text-4xl sm:text-4xl lg:text-3xl xl:text-4xl font-black uppercase tracking-tight transition-colors w-fit block leading-none',
+                    'block w-fit text-4xl font-black uppercase leading-none tracking-tight transition-colors lg:text-3xl xl:text-4xl',
                     isActive
                       ? 'text-primary'
                       : 'text-muted-foreground hover:text-primary-foreground',
@@ -57,7 +55,7 @@ export function Sidebar() {
           })}
         </ul>
 
-        <div className="shrink-0 *:w-full">
+        <div className="mt-3 shrink-0 *:w-full">
           <DownloadCVButton />
         </div>
       </nav>
