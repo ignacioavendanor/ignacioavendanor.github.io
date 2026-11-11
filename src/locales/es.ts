@@ -19,7 +19,7 @@ const es = {
     about: {
       title: 'Acerca de mí',
       description:
-        'Ingeniero de Software Full-Stack especializado en <highlight>arquitectura e infraestructura de software</highlight>. Construyo soluciones desde su definición hasta su evolución <highlight>conectando tecnología y negocio</highlight> para convertir necesidades del negocio en <highlight>soluciones que marcan la diferencia</highlight>.',
+        'Ingeniero de Software Full-Stack especializado en <highlight>arquitectura e infraestructura</highlight>. Construyo soluciones desde su definición hasta su evolución,<highlight>conectando tecnología y negocio</highlight> para convertir necesidades en <highlight>resultados que marcan la diferencia</highlight>.',
       technologies: 'Tecnologías',
       education: {
         title: 'Educación',
