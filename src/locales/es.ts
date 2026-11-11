@@ -10,8 +10,7 @@ const es = {
       role: 'Ingeniero de Software',
       description:
         'Conecto <highlight>tecnología, procesos y negocio</highlight> mediante soluciones a medida, transformando problemas operativos en <highlight>resultados prácticos y de alto impacto</highlight>.',
-      cta: 'Ver proyectos',
-      secondarycta: 'Conversemos',
+      secondarycta: 'Ver proyectos',
       cv: 'Descargar CV',
       cvUnavailable: 'CV no disponible',
       download: 'Descargando...',
@@ -19,7 +18,7 @@ const es = {
     about: {
       title: 'Acerca de mí',
       description:
-        'Ingeniero de Software Full-Stack especializado en <highlight>arquitectura e infraestructura</highlight>. Construyo soluciones desde su definición hasta su evolución,<highlight>conectando tecnología y negocio</highlight> para convertir necesidades en <highlight>resultados que marcan la diferencia</highlight>.',
+        'Ingeniero de Software Full-Stack especializado en <highlight> infraestructura</highlight>. Construyo soluciones desde su definición hasta su evolución, <highlight>conectando tecnología y negocio</highlight> para convertir necesidades en <highlight>resultados que marcan la diferencia</highlight>.',
       technologies: 'Tecnologías',
       education: {
         title: 'Educación',

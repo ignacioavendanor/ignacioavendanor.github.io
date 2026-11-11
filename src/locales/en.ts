@@ -10,8 +10,7 @@ const en = {
       role: 'Software Engineer',
       description:
         'I bridge <highlight>technology, processes, and business</highlight> with tailored solutions, turning complex operational bottlenecks into <highlight>practical, high-impact outcomes</highlight>.',
-      cta: 'View projects',
-      secondarycta: 'Get in touch',
+      secondarycta: 'View projects',
       cv: 'Download CV',
       cvUnavailable: 'CV unavailable',
       download: 'Downloading...',
