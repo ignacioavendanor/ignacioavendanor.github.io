@@ -70,8 +70,8 @@ export function Hero() {
             </Reveal>
           </div>
 
-          <div className="w-64 shrink-0 self-center xs:w-72 sm:w-82 md:w-85 lg:absolute lg:bottom-0 lg:right-18 lg:w-87">
-            <ProfilePicture className="block h-auto w-full object-contain object-bottom grayscale transition duration-300 ease-in-out hover:grayscale-0" />
+          <div className="w-64 shrink-0 self-center xs:w-72 sm:w-82 md:w-85 lg:absolute lg:bottom-0 lg:right-12 lg:w-87 xl:right-18 xl:w-90">
+            <ProfilePicture className="block h-auto w-full object-contain object-bottom grayscale transition duration-300 ease-in-out hover:grayscale-0 lg:max-h-[90svh] xl:max-h-128" />
           </div>
         </div>
       </Container>

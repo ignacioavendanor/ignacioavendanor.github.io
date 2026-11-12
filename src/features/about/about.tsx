@@ -11,10 +11,10 @@ export function About() {
   return (
     <section
       id="about"
-      className="w-full bg-primary py-28 text-primary-foreground sm:py-32 lg:py-24"
+      className="w-full bg-primary pt-28 pb-12 text-primary-foreground sm:pt-32 sm:pb-16 lg:flex lg:min-h-svh lg:items-center lg:pt-24 lg:pb-10"
     >
       <Container>
-        <div className="grid w-full grid-cols-1 items-center justify-items-center gap-10 md:grid-cols-[auto_minmax(0,1fr)] md:justify-items-start lg:gap-10">
+        <div className="grid w-full grid-cols-1 items-center justify-items-center gap-8 md:grid-cols-[auto_minmax(0,1fr)] md:justify-items-start lg:gap-10">
           {/* Image */}
           <Reveal
             y={14}
@@ -41,7 +41,7 @@ export function About() {
               y={10}
               scale={0.98}
               duration={0.35}
-              className="pt-5 text-justify text-sm leading-6 text-muted-accent sm:text-left sm:text-base sm:leading-7 lg:pt-4 lg:text-base"
+              className="pt-4 text-justify text-sm leading-6 text-muted-accent sm:text-left sm:text-base sm:leading-7 lg:pt-3 lg:text-base lg:leading-6"
             >
               <p>
                 <Trans
@@ -59,9 +59,9 @@ export function About() {
               y={10}
               scale={0.98}
               duration={0.35}
-              className="space-y-2 pt-6 sm:pt-7 lg:space-y-1.5 lg:pt-5"
+              className="space-y-2 pt-4 sm:pt-6 lg:space-y-1.5 lg:pt-4"
             >
-              <h3 className="text-sm font-bold uppercase tracking-wider sm:text-base lg:text-base">
+              <h3 className="text-sm font-bold uppercase tracking-wider sm:text-base                             lg:text-base">
                 {t('about.technologies')}
               </h3>
               <AboutTechnologies />
@@ -73,9 +73,9 @@ export function About() {
               y={10}
               scale={0.98}
               duration={0.35}
-              className="pt-5 sm:pt-6 lg:pt-5"
+              className="pt-4 sm:pt-6 lg:pt-4"
             >
-              <h3 className="text-sm font-bold uppercase tracking-wider sm:text-base lg:text-base">
+              <h3 className="text-sm font-bold uppercase tracking-wider sm:text-base                             lg:text-base">
                 {t('about.education.title')}
               </h3>
               <p className="text-sm leading-6 text-primary-foreground sm:text-base lg:text-sm">
@@ -91,9 +91,9 @@ export function About() {
               y={10}
               scale={0.98}
               duration={0.35}
-              className="pt-5 sm:pt-6 lg:pt-4"
+              className="pt-4 sm:pt-6 lg:pt-4"
             >
-              <h3 className="text-sm font-bold uppercase tracking-wider sm:text-base lg:text-base">
+              <h3 className="text-sm font-bold uppercase tracking-wider sm:text-base                             lg:text-base">
                 {t('about.languages.title')}
               </h3>
               <p className="text-sm leading-6 text-primary-foreground sm:text-base lg:text-sm">
