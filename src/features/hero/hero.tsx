@@ -16,14 +16,14 @@ export function Hero() {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/3 bg-primary lg:block"
+        className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/4 bg-primary lg:block"
       />
 
       <Container className="h-full">
         <div className="relative z-20 flex h-full flex-col-reverse items-center justify-center gap-6 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-8 xl:gap-12">
           <div className="flex w-full min-w-0 flex-col items-center justify-center text-center lg:flex-1 lg:items-start lg:self-center lg:text-left">
             <Reveal y={28} scale={0.96} delay={0.05} duration={0.55} className="w-full">
-              <h1 className="w-full text-3xl font-extrabold uppercase tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+              <h1 className="w-full text-3xl font-extrabold uppercase tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl">
                 <span className="mb-4 block text-xs font-bold uppercase leading-normal tracking-wider text-primary sm:mb-5 sm:text-base lg:text-lg xl:text-xl">
                   {t('hero.role')}
                 </span>
@@ -70,8 +70,8 @@ export function Hero() {
             </Reveal>
           </div>
 
-          <div className="w-64 shrink-0 self-center xs:w-72 sm:w-82 md:w-85 lg:absolute lg:bottom-0 lg:right-24 lg:w-87">
-            <ProfilePicture className="block h-auto w-full object-contain object-bottom grayscale transition duration-300 ease-in-out hover:grayscale-0" />
+          <div className="w-64 shrink-0 self-center xs:w-72 sm:w-82 md:w-85 lg:absolute lg:bottom-0 lg:right-12 lg:w-87 xl:right-18 xl:w-90">
+            <ProfilePicture className="block h-auto w-full object-contain object-bottom grayscale transition duration-300 ease-in-out hover:grayscale-0 lg:max-h-[90svh] xl:max-h-128" />
           </div>
         </div>
       </Container>

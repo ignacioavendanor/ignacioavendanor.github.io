@@ -8,7 +8,7 @@ export function AboutTechnologies() {
         <Badge
           key={tech}
           variant="outline"
-          className="h-auto max-w-full px-2.5 py-1 text-xs sm:text-sm"
+          className="h-auto max-w-full px-2.5 py-1 text-xs sm:text-sm lg:text-sm"
         >
           {tech}
         </Badge>

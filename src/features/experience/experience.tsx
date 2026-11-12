@@ -27,7 +27,7 @@ export function Experience() {
   }))
 
   return (
-    <section id="experience" className="py-30 overflow-hidden bg-foreground">
+    <section id="experience" className="py-32 overflow-hidden bg-foreground">
       <Container>
         <div className="mx-auto max-w-4xl text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-primary-foreground">
