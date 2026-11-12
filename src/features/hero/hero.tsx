@@ -23,7 +23,7 @@ export function Hero() {
         <div className="relative z-20 flex h-full flex-col-reverse items-center justify-center gap-6 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-8 xl:gap-12">
           <div className="flex w-full min-w-0 flex-col items-center justify-center text-center lg:flex-1 lg:items-start lg:self-center lg:text-left">
             <Reveal y={28} scale={0.96} delay={0.05} duration={0.55} className="w-full">
-              <h1 className="w-full text-3xl font-extrabold uppercase tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+              <h1 className="w-full text-3xl font-extrabold uppercase tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl">
                 <span className="mb-4 block text-xs font-bold uppercase leading-normal tracking-wider text-primary sm:mb-5 sm:text-base lg:text-lg xl:text-xl">
                   {t('hero.role')}
                 </span>
