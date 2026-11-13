@@ -9,7 +9,6 @@ import { useTranslation } from 'react-i18next'
 import { Container } from '@/components/layouts/Container'
 import { useScroll } from '@/hooks/useScroll'
 import { cn } from '@/lib/utils'
-import { Separator } from '@/components/ui/separator'
 import { navigationLinks } from '@/config/navigation'
 
 export function Navbar() {
