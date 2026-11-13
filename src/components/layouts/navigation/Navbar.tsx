@@ -9,7 +9,6 @@ import { useTranslation } from 'react-i18next'
 import { Container } from '@/components/layouts/Container'
 import { useScroll } from '@/hooks/useScroll'
 import { cn } from '@/lib/utils'
-import { Separator } from '@/components/ui/separator'
 import { navigationLinks } from '@/config/navigation'
 
 export function Navbar() {
@@ -26,55 +25,42 @@ export function Navbar() {
     >
       <Container className="relative flex items-center justify-between py-4">
         <Brand />
-
-        <nav
-          aria-label={t('menu.title')}
-          className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block"
-        >
-          <ul className="flex items-center gap-1">
-            {navigationLinks.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  aria-current={item.id === activeSection ? 'location' : undefined}
-                  className="inline-flex h-10 items-center px-5 text-sm tracking-wide text-muted-foreground transition-colors duration-200 hover:bg-primary hover:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary aria-[current=location]:bg-primary aria-[current=location]:text-primary-foreground aria-[current=location]:shadow-md"
-                >
-                  {t(item.label)}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
         <div className="flex items-center gap-1">
-          <LanguageToggle />
-          <Separator
-            orientation="vertical"
-            className="mx-1 h-5 rounded-full bg-muted-foreground/50 lg:hidden"
-          />
+          <nav
+            aria-label={t('menu.title')}
+            className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block"
+          >
+            <ul className="flex items-center gap-1">
+              {navigationLinks.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    aria-current={item.id === activeSection ? 'location' : undefined}
+                    className="inline-flex h-10 items-center px-4 text-sm font-semibold tracking-wide text-muted-foreground transition-colors duration-200 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary aria-[current=location]:text-foreground aria-[current=location]:[-webkit-text-stroke:var(--text-outline-width)_var(--text-outline-color)] aria-[current=location]:[paint-order:stroke_fill]"
+                  >
+                    {t(item.label)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           <Sheet open={isOpen} onOpenChange={setMenuOpen}>
             <Button
               variant="control"
               size="icon-lg"
               onClick={() => setMenuOpen(true)}
-              className="border-transparent bg-transparent text-foreground transition-[color,opacity] duration-200 hover:opacity-70 active:opacity-50 lg:hidden"
               aria-label={t('menu.title')}
+              className="border-transparent bg-transparent px-1 transition-opacity duration-200 hover:opacity-70 active:opacity-50 lg:hidden"
             >
-              <span className="relative size-5 shrink-0">
-                {isScrolled && (
-                  <Menu
-                    aria-hidden
-                    className="absolute inset-0 size-5"
-                    strokeWidth={4.5}
-                    style={{ stroke: 'var(--text-outline-color)' }}
-                  />
+              <span
+                className={cn(
+                  'flex size-6 shrink-0 items-center justify-center rounded-md bg-foreground text-background transition-[transform,box-shadow] duration-200 group-active/button:scale-95',
+                  isScrolled &&
+                    'shadow-[0_0_0_var(--text-outline-width)_var(--text-outline-color)]',
                 )}
-                <Menu
-                  className="absolute inset-0 size-5"
-                  strokeWidth={2}
-                  style={{ stroke: 'var(--foreground)' }}
-                />
+              >
+                <Menu aria-hidden className="size-4" strokeWidth={2.5} />
               </span>
             </Button>
 
@@ -86,6 +72,8 @@ export function Navbar() {
               <Sidebar />
             </SheetContent>
           </Sheet>
+
+          <LanguageToggle />
         </div>
       </Container>
     </header>
