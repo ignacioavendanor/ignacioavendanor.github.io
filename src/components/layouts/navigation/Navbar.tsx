@@ -27,7 +27,10 @@ export function Navbar() {
       <Container className="relative flex items-center justify-between py-4">
         <Brand />
         <div className="flex items-center gap-1">
-          <nav aria-label={t('menu.title')} className="hidden lg:block">
+          <nav
+            aria-label={t('menu.title')}
+            className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block"
+          >
             <ul className="flex items-center gap-1">
               {navigationLinks.map((item) => (
                 <li key={item.id}>
@@ -54,7 +57,8 @@ export function Navbar() {
               <span
                 className={cn(
                   'flex size-6 shrink-0 items-center justify-center rounded-md bg-foreground text-background transition-[transform,box-shadow] duration-200 group-active/button:scale-95',
-                  isScrolled && 'shadow-[0_0_0_var(--text-outline-width)_var(--text-outline-color)]',
+                  isScrolled &&
+                    'shadow-[0_0_0_var(--text-outline-width)_var(--text-outline-color)]',
                 )}
               >
                 <Menu aria-hidden className="size-4" strokeWidth={2.5} />
@@ -70,13 +74,6 @@ export function Navbar() {
             </SheetContent>
           </Sheet>
 
-          <Separator
-            orientation="vertical"
-            className={cn(
-              'mx-1 h-5 rounded-full transition-colors duration-300',
-              isScrolled ? 'bg-muted-foreground' : 'bg-foreground',
-            )}
-          />
           <LanguageToggle />
         </div>
       </Container>
