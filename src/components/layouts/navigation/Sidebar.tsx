@@ -15,7 +15,7 @@ export function Sidebar() {
   return (
     <div className="flex h-svh flex-col bg-foreground text-primary-foreground overflow-hidden selection:bg-primary selection:text-primary-foreground">
       {/* Header */}
-      <div className="flex items-center justify-center px-6 sm:px-10 py-2.5 shrink-0">
+      <div className="flex items-center justify-center px-6 sm:px-10 py-6 sm:py-7 shrink-0">
         <Button variant="control" onClick={closeMenu} className="group gap-2 px-3 py-1 h-auto">
           <span className="text-sm sm:text-base font-medium tracking-wider">{t('menu.close')}</span>
           <X
@@ -30,9 +30,9 @@ export function Sidebar() {
       {/* Nav items */}
       <nav
         aria-label={t('menu.title')}
-        className="flex min-h-0 flex-1 flex-col justify-between overflow-y-auto px-6 py-3 sm:px-10 sm:py-4 lg:px-14"
+        className="flex min-h-0 flex-1 flex-col justify-between overflow-y-auto                         px-6 py-6 sm:px-10 sm:py-8 lg:px-14"
       >
-        <ul className="m-0 flex flex-1 flex-col justify-evenly p-0 list-none">
+                <ul className="m-0 flex flex-1 flex-col justify-center gap-8 p-0 list-none sm:gap-9">
           {navigationLinks.map((item) => {
             const isActive = activeSection === item.id
 
@@ -42,7 +42,7 @@ export function Sidebar() {
                   href={`#${item.id}`}
                   onClick={closeMenu}
                   className={cn(
-                    'block w-fit text-4xl font-black uppercase leading-none tracking-tight transition-colors lg:text-3xl xl:text-4xl',
+                    'block w-fit text-5xl font-black uppercase leading-none tracking-tight transition-colors lg:text-4xl xl:text-5xl',
                     isActive
                       ? 'text-primary'
                       : 'text-muted-foreground hover:text-primary-foreground',
@@ -55,7 +55,7 @@ export function Sidebar() {
           })}
         </ul>
 
-        <div className="mt-3 shrink-0 *:w-full">
+        <div className="mt-6 shrink-0 *:w-full">
           <DownloadCVButton />
         </div>
       </nav>
@@ -63,7 +63,7 @@ export function Sidebar() {
       <Separator className="bg-primary-foreground/20" />
 
       {/* Footer */}
-      <div className="flex shrink-0 flex-col gap-3 px-6 sm:px-10 lg:px-14 py-3 sm:py-4">
+      <div className="flex shrink-0 flex-col gap-4 px-6 sm:px-10 lg:px-14 py-7 sm:py-8">
         <span className="text-xs sm:text-sm font-bold tracking-widest text-muted-dark uppercase">
           {t('contact.socials')}
         </span>
