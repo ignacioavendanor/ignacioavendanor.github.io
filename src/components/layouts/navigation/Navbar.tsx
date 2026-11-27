@@ -36,7 +36,7 @@ export function Navbar() {
                   <a
                     href={`#${item.id}`}
                     aria-current={item.id === activeSection ? 'location' : undefined}
-                    className="inline-flex h-10 items-center px-4 text-sm font-semibold tracking-wide text-muted-foreground transition-colors duration-200 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary aria-[current=location]:text-foreground aria-[current=location]:[-webkit-text-stroke:var(--text-outline-width)_var(--text-outline-color)] aria-[current=location]:[paint-order:stroke_fill]"
+                    className="inline-flex h-10 items-center px-4 text-sm font-semibold tracking-wide text-muted-foreground transition-colors duration-200 hover:text-accent-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary aria-[current=location]:text-foreground aria-[current=location]:[-webkit-text-stroke:1px_var(--color-border)] aria-[current=location]:[paint-order:stroke_fill]"
                   >
                     {t(item.label)}
                   </a>
@@ -56,8 +56,7 @@ export function Navbar() {
               <span
                 className={cn(
                   'flex size-6 shrink-0 items-center justify-center rounded-md bg-foreground text-background transition-[transform,box-shadow] duration-200 group-active/button:scale-95',
-                  isScrolled &&
-                    'shadow-[0_0_0_var(--text-outline-width)_var(--text-outline-color)]',
+                  isScrolled && 'shadow-[0_0_0_1px_var(--color-border)]',
                 )}
               >
                 <Menu aria-hidden className="size-4" strokeWidth={2.5} />

@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-svh items-center justify-center overflow-hidden bg-background py-10 lg:h-svh lg:pb-0 lg:pt-12"
+      className="relative flex min-h-svh items-center justify-center overflow-hidden bg-background py-10 pt-16 lg:h-svh lg:pb-0 lg:pt-12"
     >
       <div
         aria-hidden="true"
@@ -20,11 +20,11 @@ export function Hero() {
       />
 
       <Container className="h-full">
-        <div className="relative z-20 flex h-full flex-col-reverse items-center justify-center gap-6 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-8 xl:gap-12">
+        <div className="relative z-20 flex h-full flex-col-reverse items-center justify-center gap-2 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-8 xl:gap-12">
           <div className="flex w-full min-w-0 flex-col items-center justify-center text-center lg:flex-1 lg:items-start lg:self-center lg:text-left">
             <Reveal y={28} scale={0.96} delay={0.05} duration={0.55} className="w-full">
               <h1 className="w-full text-3xl font-extrabold uppercase tracking-tighter xs:text-5xl sm:text-6xl md:text-7xl">
-                <span className="mb-4 block text-xs font-bold uppercase leading-normal tracking-wider text-primary sm:mb-5 sm:text-base lg:text-lg xl:text-xl">
+                <span className="mb-2 block text-xs font-bold uppercase leading-normal tracking-wider text-primary sm:mb-3 sm:text-base lg:text-lg xl:text-xl">
                   {t('hero.role')}
                 </span>
                 Ignacio
@@ -54,7 +54,7 @@ export function Hero() {
               delay={0.2}
               y={18}
               duration={0.45}
-              className="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
+              className="mt-4 flex flex-wrap items-center justify-center gap-3 lg:mt-6 lg:justify-start"
             >
               <DownloadCVButton variant="default" />
 
@@ -70,7 +70,7 @@ export function Hero() {
             </Reveal>
           </div>
 
-          <div className="w-64 shrink-0 self-center xs:w-72 sm:w-82 md:w-85 lg:absolute lg:bottom-0 lg:right-12 lg:w-87 xl:right-18 xl:w-90">
+          <div className="w-36 shrink-0 self-center xs:w-44 sm:w-52 md:w-60 lg:absolute lg:bottom-0 lg:right-12 lg:w-87 xl:right-18 xl:w-90">
             <ProfilePicture className="block h-auto w-full object-contain object-bottom grayscale transition duration-300 ease-in-out hover:grayscale-0 lg:max-h-[90svh] xl:max-h-128" />
           </div>
         </div>

@@ -11,7 +11,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden py-16 sm:py-20 bg-foreground text-primary-foreground transition-colors"
+      className="relative overflow-hidden pt-16 pb-8 sm:py-20 bg-foreground text-primary-foreground transition-colors"
     >
       <Container className="relative z-10">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">

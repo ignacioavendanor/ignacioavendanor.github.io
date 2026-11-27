@@ -9,8 +9,7 @@ export function Brand() {
       href="#home"
       className={cn(
         'text-base font-bold tracking-tight text-foreground sm:text-lg',
-        isScrolled &&
-          '[-webkit-text-stroke:var(--text-outline-width)_var(--text-outline-color)] [paint-order:stroke_fill]',
+        isScrolled && '[-webkit-text-stroke:1px_var(--color-border)] [paint-order:stroke_fill]',
       )}
     >
       Ignacio Avendaño
