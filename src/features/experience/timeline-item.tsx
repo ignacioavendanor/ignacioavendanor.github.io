@@ -45,7 +45,7 @@ export function TimelineItem({
               : 'md:col-start-3 md:pl-10 md:text-left',
           )}
         >
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-accent">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-accent-light">
             {item.period}
           </p>
           <h3 className="text-2xl font-black tracking-tight text-primary-foreground sm:text-3xl">
@@ -57,9 +57,10 @@ export function TimelineItem({
         </div>
         <div
           ref={setNodeRef}
+          id={`experience-${item.id}`}
           onPointerEnter={() => onPointerEnter(index)}
           onPointerLeave={onPointerLeave}
-          className="relative col-start-1 row-span-2 row-start-1 flex h-24 w-24 items-center justify-center justify-self-center md:col-start-2 md:row-span-1 md:h-28 md:w-28"
+          className="relative col-start-1 row-span-2 row-start-1 flex h-24 w-24 scroll-mt-[40svh] items-center justify-center justify-self-center md:col-start-2 md:row-span-1 md:h-28 md:w-28"
         >
           <span
             aria-hidden="true"
@@ -68,9 +69,11 @@ export function TimelineItem({
               isHighlighted ? 'opacity-100' : 'opacity-0',
             )}
           />
-          <div
+          <a
+            href={`#experience-${item.id}`}
+            aria-label={item.company}
             className={cn(
-              'relative z-10 flex h-full w-full items-center justify-center rounded-full border-4 bg-foreground p-4 transition-colors duration-300',
+              'relative z-10 flex h-full w-full items-center justify-center rounded-full border-4 bg-foreground p-4 transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary',
               isHighlighted ? 'border-primary' : 'border-border/10',
             )}
           >
@@ -83,7 +86,7 @@ export function TimelineItem({
               decoding="async"
               className="max-h-14 max-w-14 object-contain md:max-h-16 md:max-w-16"
             />
-          </div>
+          </a>
         </div>
         <div
           className={cn(

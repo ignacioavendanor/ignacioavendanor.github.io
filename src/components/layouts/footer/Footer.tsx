@@ -9,7 +9,7 @@ export function Footer() {
 
   return (
     <footer className="w-full bg-foreground text-primary-foreground">
-      <Container className="flex flex-col items-center justify-between gap-6 py-6 md:flex-row md:gap-4 md:py-4">
+      <Container className="flex flex-col items-center justify-between gap-6 pt-2 pb-6 md:flex-row md:gap-4 md:py-4">
         {/* Logo */}
         <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:gap-4 sm:text-left">
           <a

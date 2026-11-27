@@ -18,6 +18,7 @@
   --color-destructive: var(--destructive);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-accent-light: var(--accent-light);
   --color-muted-dark: var(--muted-dark);
   --color-muted-accent: var(--muted-accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -41,36 +42,27 @@
 :root {
   /* Background */
   --background: oklch(97.67% 0.003 245);
-  --foreground: oklch(18% 0.04 245);
-
+  --foreground: oklch(20% 0.045 250);
   /* Overlay */
   --popover: oklch(100% 0 0);
   --popover-foreground: oklch(18% 0.04 260);
-
   /* Branding */
   --primary: oklch(52% 0.19 245);
   --primary-foreground: oklch(99% 0 0);
-
   /* Muted */
   --muted: oklch(95% 0.012 258);
   --muted-foreground: oklch(48% 0.035 258);
   --muted-dark: oklch(71.07% 0.035 258);
   --muted-accent: oklch(93.5% 0.03 258);
-
   /* Accent */
   --accent: oklch(52% 0.19 245);
   --accent-foreground: oklch(32% 0.11 258);
-
+  --accent-light: oklch(74% 0.13 245);
   /* Semantic */
   --destructive: oklch(57.7% 0.21 27.3);
   --border: oklch(90% 0.015 258);
   --ring: oklch(52% 0.19 245);
-
   --radius: 0rem;
-
-  /* Text outlines */
-  --text-outline-width: 1px;
-  --text-outline-color: white;
 }
 
 @layer base {
