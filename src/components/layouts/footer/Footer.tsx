@@ -3,7 +3,6 @@ import { navigationLinks } from '@/config/navigation'
 import { Separator } from '@/components/ui/separator'
 import { useTranslation } from 'react-i18next'
 import { SOCIAL_LINKS } from '@/data/social-links'
-import { Logo } from '@/components/shared/logo'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -13,8 +12,11 @@ export function Footer() {
       <Container className="flex flex-col items-center justify-between gap-6 py-6 md:flex-row md:gap-4 md:py-4">
         {/* Logo */}
         <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:gap-4 sm:text-left">
-          <a href="#" className="transition-opacity hover:opacity-80" aria-label="Inicio">
-            <Logo className="h-7 w-auto sm:h-8" />
+          <a
+            href="#home"
+            className="text-base font-bold tracking-tight text-primary-foreground transition-opacity hover:opacity-80 sm:text-lg"
+          >
+            Ignacio Avendaño
           </a>
           <Separator
             orientation="vertical"
